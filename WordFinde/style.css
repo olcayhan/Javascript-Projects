@@ -1,23 +1,23 @@
 body{
-    background: #B2EF9B;
+    background: #363945;
 }
 .title-h1{
-    color: crimson;
+    color:  #A2242F;
     text-align: center;
-    font-family: 'DynaPuff',sans-serif;
+    font-family: 'Rubik Dirt',sans-serif;
     font-size: 50px;
     font-weight: 500;
 
 }
 .title-h1 span{
-    color: #00ddff;
+    color: #56C6A9;
 }
 
 /* container section */
 .container .row{
     width: 350px;
     height: 50px;
-    margin-left: 560px;
+    margin-left: 584px;
     display: flex;
     justify-content: space-evenly;
     border-radius: 10px;
@@ -27,7 +27,7 @@ body{
 }
 .container .row .box{
     width: 48px;
-    background: crimson;
+    background:  #A2242F;
     height: 48px;
     border-radius: 8px;
     margin-top: 2px;
@@ -45,15 +45,13 @@ body{
 
 /* keyboard section */
 .keyboard{
-    width: 600px;
-    background: #00ddff;
-    height: 200px;
+    width: 620px;
+    background: #FFA500;
+    height: 210px;
     margin-left: 450px;
     display:inline-block;
     margin-top: 18px;
     border-radius: 30px;
-    border: #fff685;
-    border-style:inset;
     border-width: 5px; 
     margin-top: 40px;
 }
@@ -64,28 +62,43 @@ body{
     
 }
 .keyboard .words .buttons{
-    background:#ff1d58;
+    background:#282D3C;
     border-radius: 80%;
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
     color: #fff;
-    font-size: 20px;
+    font-size: 18px;
     font-family: "DynaPuff",sans-serif;
-    margin-left: 18px;
-    border: #ff1d58;
+    margin-left: 14px;
+    border: #55B4B0;
     border-width:2px;
 }
+.keyboard .words #del{
+    background: #CD212A;
+}
+.keyboard .words #del:hover{
+    background:#A09998;
+}
+.keyboard .words #ok{
+    background: #006B54;
+}
+.keyboard .words #ok:hover{
+    background:#A09998;
+}
 .keyboard .words .buttons:hover{
-    background: #fff;
-    color: crimson;
+    background: #A09998;
+    color: #fff;
     transition: all 0.3s ease;
-    border-style: inset;
 }
 
+
+
+
+/* game over section */
 .endGame .gameOver{
     padding-top:20px ;
     color: #fff;
-    height: 80%;
+    height: 75%;
     width: 620px;
     background:crimson;
     position: fixed;
@@ -93,7 +106,7 @@ body{
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 10px;
-    font-family:"DynaPuff",sans-serif;
+    font-family:"Permanent Marker",sans-serif;
     font-size: 50px;
     text-align: center;
 }
@@ -101,23 +114,106 @@ body{
 .endGame .gameBtn{
     width: 180px;
     height: 80px;
-    background: #fff;
-    color: #ff1d58;
+    background: #363945;
+    color: #fff;
     position: fixed;
-    top: 58%;
+    top: 70%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-family:"DynaPuff",sans-serif;
+    font-family:"Permanent Marker",sans-serif;
     font-size: 30px;
     text-align: center;
-    border:#ff1d58;
     border-radius: 10px;
-    border: #fff;
-    border-style:outset;
+ 
 }
 .endGame .gameBtn:hover{
     border: #fff;
     border-style:inset;
-    background: crimson;
+    background: #9A8B4F;
     color: #fff;
+}
+
+
+
+
+
+/*  target the elemenent after the label*/
+.checkbox:checked + .label .ball{
+transform: translateX(24px);
+}
+  
+  .fa-moon {
+    color: pink;
+  }
+  
+  .fa-sun {
+    color: yellow;
+  }
+
+
+
+
+/* media section */
+@media (max-width: 1300px){
+
+    .container .row {
+        margin-left:32%;
+    }
+    .keyboard{
+        margin-left:19%;
+        
+    }
+    
+}
+@media (max-width: 947px){
+    .keyboard{
+        height: 190px;
+        width: 500px;
+        margin-left: 200px;
+    }
+    .container .row {
+        margin-left:32%;
+    }
+    .keyboard .words .buttons{
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+        margin-left: 9px;
+    }
+}
+
+
+@media (max-width: 690px){
+    .keyboard{
+        height: 180px;
+        width: 480px;
+        margin-left: 4%;
+    }
+    .container .row {
+        margin-left:20%;
+    }
+    .keyboard .words .buttons{
+        width: 37px;
+        height: 37px;
+        font-size: 16px;
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: 500px){
+    .keyboard{
+        align-items: center;
+        height: 180px;
+        width: 480px;
+        margin-left: 0px;
+    }
+    .container .row {
+        margin-left:14%;
+    }
+    .keyboard .words .buttons{
+        width: 37px;
+        height: 37px;
+        font-size: 16px;
+        margin-left: 10px;
+    }
 }

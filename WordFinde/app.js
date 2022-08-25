@@ -4,6 +4,7 @@ var c =0
 var a=0;
 var temp =0;
 let word;
+let word2
 
 const generator = document.querySelector(".generator");
 const keyboard = document.querySelectorAll(".buttons");
@@ -18,7 +19,10 @@ function getWord(){
     }
 
 
-getWord().then(response => (word = response));
+getWord().then(response => (
+    word = response.toUpperCase(),
+    word2 = word.split("")
+    ));
 
 
 
@@ -36,15 +40,17 @@ function contoller(){
     for(let i =0; i<6;i++){
 
         if(box[i+c].textContent == word[i]){
-            box[i+c].style.background = "#6aaa64"
-            box[i+c].style.border = "#6aaa64"
+            box[i+c].style.background = "#88B04B"
+            box[i+c].style.border = "#88B04B"
             rightanswer[i] = word[i];
+            word2[i] = "";
+            
            
         }
 
-        else if(word.includes(box[i+c].textContent)){
-            box[i+c].style.background = "#c9b458"
-            box[i+c].style.border = "#c9b458"
+        else if(word2.includes(box[i+c].textContent)){
+            box[i+c].style.background = "#EFC050"
+            box[i+c].style.border = "#EFC050"
         }
 
         else{
@@ -75,6 +81,7 @@ function Overtester(){
 
     if(rightanswer.join('') == word){
         div.innerHTML = `Congrualtions!! <br>You are a Winner <br><br> ${word} `;
+        div.style.background= "#00A170";
     }
     else div.innerHTML = `Unlucky!! <br>  Try Again <br><br> ${word}`;
     document.getElementById("endGame").appendChild(div);
@@ -85,6 +92,9 @@ function Overtester(){
     btn.innerHTML = "Play Again"
     document.getElementById("endGame").appendChild(btn)
    
+    var btnTo = document.getElementById("gameBtn")
+    btnTo.addEventListener("click",()=>{location.reload();
+    })
 }
 
 function getKeyboard(e){
@@ -98,12 +108,12 @@ function getKeyboard(e){
             a++;
         }
         else{
-            temp =6;
+            temp = 6;
         }
     }
     if (temp ==6 && e.target.id == "ok"){
         contoller();
-        temp -=6;
+        temp -= 6;
     };
     console.log(temp)
     if(e.target.id == "del" && temp <=6){
