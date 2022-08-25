@@ -35,30 +35,11 @@ body{
     border-style: inset;
     border-right-width: 3px;
     border-bottom-width: 3px;
-    
-}
-/* random word generate section */
-
-.random .generator{
-    background: crimson;
-    width: 100px;
-    height: 50px;
     color: #fff;
-    margin-left: 680px;
-    display: flex;
-    margin-top: 17px;
-    border: #ff1d58;
-    border-radius: 8px;
-    font-size: 13px;
+    text-align: center;
     font-family: "DynaPuff",sans-serif;
-
-}
-
-.random :hover{
-    background: #fff;
-    color: crimson;
-    transition: all 0.3s ease;
-
+    font-size: 40px;
+    
 }
 
 
@@ -74,6 +55,7 @@ body{
     border: #fff685;
     border-style:inset;
     border-width: 5px; 
+    margin-top: 40px;
 }
 .keyboard .words{
     margin-top: 20px;
@@ -100,3 +82,11 @@ body{
     border-style: inset;
 }
 
+/* game over section */
+
+.gameOver{
+    background: #ff1d58;
+    width: 600px;
+    height: 600px;
+    display:flex;
+}
