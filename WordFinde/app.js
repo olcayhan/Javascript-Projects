@@ -23,6 +23,7 @@ getWord().then(response => (word = response));
 
 
 function writeWord(){
+    
 
 for (let i=0; i < keyboard.length;i++){
     keyboard[i].addEventListener("click",(e)=>getKeyboard(e));
@@ -30,7 +31,7 @@ for (let i=0; i < keyboard.length;i++){
 }
 
 function contoller(){ 
-    console.log(word)
+    
     rightanswer = [];
     for(let i =0; i<6;i++){
 
@@ -68,13 +69,26 @@ function contoller(){
 function Overtester(){
     console.log("Overtester Worked");
     
-    var gameOver = document.createElement("div");
+    var div = document.createElement("div");
+    div.className = "gameOver";
+    div.id = "gameOver";
 
-    gameOver.className = "gameOver";
+    if(rightanswer.join('') == word){
+        div.innerHTML = `Congrualtions!! <br>You are a Winner <br><br> ${word} `;
+    }
+    else div.innerHTML = `Unlucky!! <br>  Try Again <br><br> ${word}`;
+    document.getElementById("endGame").appendChild(div);
+
+    var btn = document.createElement("button")
+    btn.id = "gameBtn";
+    btn.className = "gameBtn";
+    btn.innerHTML = "Play Again"
+    document.getElementById("endGame").appendChild(btn)
    
 }
 
 function getKeyboard(e){
+    console.log(word)
         
     if(e.target.id != "del" && e.target.id != "ok"){
         temp++;

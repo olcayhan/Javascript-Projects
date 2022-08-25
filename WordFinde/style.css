@@ -82,11 +82,42 @@ body{
     border-style: inset;
 }
 
-/* game over section */
+.endGame .gameOver{
+    padding-top:20px ;
+    color: #fff;
+    height: 80%;
+    width: 620px;
+    background:crimson;
+    position: fixed;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    font-family:"DynaPuff",sans-serif;
+    font-size: 50px;
+    text-align: center;
+}
 
-.gameOver{
-    background: #ff1d58;
-    width: 600px;
-    height: 600px;
-    display:flex;
+.endGame .gameBtn{
+    width: 180px;
+    height: 80px;
+    background: #fff;
+    color: #ff1d58;
+    position: fixed;
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family:"DynaPuff",sans-serif;
+    font-size: 30px;
+    text-align: center;
+    border:#ff1d58;
+    border-radius: 10px;
+    border: #fff;
+    border-style:outset;
+}
+.endGame .gameBtn:hover{
+    border: #fff;
+    border-style:inset;
+    background: crimson;
+    color: #fff;
 }
