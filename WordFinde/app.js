@@ -1,4 +1,7 @@
 // declaration
+const btnAudio = new Audio('https://www.soundjay.com/buttons/sounds/button-09a.mp3')
+const okAudio = new Audio('https://www.soundjay.com/communication/sounds/cassette-eject-1.mp3')
+const delAudio = new Audio('https://www.soundjay.com/communication/sounds/tape-recorder-eject-1.mp3')
 var rightanswer = [];
 var wronganswer = [];
 var c =0
@@ -24,8 +27,9 @@ for (let i=0; i < keyboard.length;i++) keyboard[i].addEventListener("click",(e)=
 // function for getting keyboard in the website
 function getKeyboard(e){
     console.log(word)
-        
-    if(e.target.id != "del" && e.target.id != "ok"){
+    
+    setTimeout(() => {if(e.target.id != "del" && e.target.id != "ok"){
+        btnAudio.play();
         temp++;
         if (temp<=6){
             box[a].innerHTML = e.target.id;
@@ -37,6 +41,7 @@ function getKeyboard(e){
     if (temp ==6 && e.target.id == "ok"){
         temp -= 6;
         contoller();
+        okAudio.play();
 
     }
 
@@ -45,9 +50,10 @@ function getKeyboard(e){
             a--;
             temp--;
             box[a].innerHTML = "";
+            delAudio.play();
         } 
     }
-    
+},150);
 }
 
 // function for getting word with API on the server.
@@ -60,7 +66,7 @@ function getWord(){
 // function for checking gueesed letter true, false or letter in word but wrong box.
 function contoller(){ 
     
-    rightanswer = [];
+    setTimeout(()=>{rightanswer = [];
     for(let i =0; i<6;i++){
 
         if(box[i+c].textContent == word[i]){
@@ -84,7 +90,7 @@ function contoller(){
     c +=6;
     console.log("Controller Working");
     if (rightanswer.join('') == word || c == 30) Overtester();
-    
+    },100)
     
 }
 
