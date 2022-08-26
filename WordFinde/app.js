@@ -97,7 +97,8 @@ function Overtester(){
     div.id = "gameOver";
 
     if(rightanswer.join('') == word){
-        div.innerHTML = `Congrualtions!! <br>You are a Winner <br><br> ${word} `;
+        console.log(c)
+        div.innerHTML = `Congrualtions!! <br>You are a Winner <br><br> ${word} <br> you achieved ${c/6} .step <br> your point = ${120-(c/6)*20}`;
         div.style.background= "#00A170";
     }
     else div.innerHTML = `Unlucky!! <br>  Try Again <br><br> ${word}`;
