@@ -133,22 +133,62 @@ body{
     color: #fff;
 }
 
+/* enter page section */
 
-
-
-
-/*  target the elemenent after the label*/
-.checkbox:checked + .label .ball{
-transform: translateX(24px);
+.enterPage{
+    
+    margin-top: 8%;
+    margin-left: 30%;
+    width: 600px;
+    height: 500px;
+    background:#FFA500;
+    opacity: 0.9;
+    font-family:"Permanent Marker",sans-serif;
+    border-radius: 15px;
+    position: fixed;
+    color: #fff;
 }
-  
-  .fa-moon {
-    color: pink;
-  }
-  
-  .fa-sun {
-    color: yellow;
-  }
+.enterPage h1{
+    margin-top: 45px;
+    font-size: 50px;
+    text-align: center;
+    
+}
+.enterPage h2{
+    margin-top: 0px;
+    font-size: 50px;
+    text-align: center;
+    color: #A2242F;
+    
+}
+.enterPage p{
+    font-size: 25px;
+    text-align: center;
+}
+.enterPage h2 span{
+    color: #56C6A9;
+}
+.enterPage .enterBtn{
+    margin-top: 25px;
+    width: 120px;
+    height: 60px;
+    background: #363945;
+    color: #fff;
+    font-family:"Permanent Marker",sans-serif;
+    font-size: 30px;
+    text-align: center;
+    border-radius: 10px;
+    margin-left: 40%;
+}
+
+
+
+.enterPage .enterBtn:hover{
+    border: #fff;
+
+    background: #9A8B4F;
+    color: #fff;
+}
 
 
 
