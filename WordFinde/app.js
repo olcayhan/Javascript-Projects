@@ -1,7 +1,7 @@
 // declaration
-const btnAudio = new Audio('https://www.soundjay.com/buttons/sounds/button-09a.mp3')
-const okAudio = new Audio('https://www.soundjay.com/communication/sounds/cassette-eject-1.mp3')
-const delAudio = new Audio('https://www.soundjay.com/communication/sounds/tape-recorder-eject-1.mp3')
+let btnAudio = new Audio('https://www.soundjay.com/communication/sounds/typewriter-key-1.mp3')
+let okAudio = new Audio('https://www.soundjay.com/communication/sounds/cassette-eject-1.mp3')
+let delAudio = new Audio('https://www.soundjay.com/communication/sounds/tape-recorder-eject-1.mp3')
 var rightanswer = [];
 var wronganswer = [];
 var c =0
@@ -28,14 +28,18 @@ for (let i=0; i < keyboard.length;i++) keyboard[i].addEventListener("click",(e)=
 function getKeyboard(e){
     console.log(word)
     
-    setTimeout(() => {if(e.target.id != "del" && e.target.id != "ok"){
-        btnAudio.play();
+    if(e.target.id != "del" && e.target.id != "ok"){
         temp++;
         if (temp<=6){
             box[a].innerHTML = e.target.id;
             a++;
         }
         else temp = 6;
+        btnAudio.load();
+        btnAudio.play();
+        setTimeout(() => {btnAudio.pause()},200);
+        
+
     }
   
     if (temp ==6 && e.target.id == "ok"){
@@ -50,10 +54,12 @@ function getKeyboard(e){
             a--;
             temp--;
             box[a].innerHTML = "";
+            delAudio.load();
             delAudio.play();
+            setTimeout(() => {delAudio.pause();},150);
+            
         } 
     }
-},150);
 }
 
 // function for getting word with API on the server.
