@@ -1,14 +1,14 @@
 // declaration
-let btnAudio = new Audio('https://www.soundjay.com/communication/sounds/typewriter-key-1.mp3')
-let okAudio = new Audio('https://www.soundjay.com/communication/sounds/cassette-eject-1.mp3')
-let delAudio = new Audio('https://www.soundjay.com/communication/sounds/tape-recorder-eject-1.mp3')
-var rightanswer = [];
-var wronganswer = [];
-var c =0
-var a=0;
-var temp =0;
-let word;
-let word2;
+let btnAudio = new Audio('https://www.soundjay.com/communication/sounds/typewriter-key-1.mp3') // sound effect for a keyboard button
+let okAudio = new Audio('https://www.soundjay.com/communication/sounds/cassette-eject-1.mp3') // sound effect for ok button on keyboard
+let delAudio = new Audio('https://www.soundjay.com/communication/sounds/tape-recorder-eject-1.mp3') // sound effect for del button on keyboard
+var rightanswer = []; // a list for right answer
+var wronganswer = []; // a list for wrong answer
+var c =0 // counter for controller function which is keep game is where. 
+var a=0; // counter for all press in all boxes
+var temp =0; // counter for all press in boxes at each row
+let word; // word for guessing
+
 
 // load queries
 const generator = document.querySelector(".generator");
@@ -17,12 +17,11 @@ const box = document.querySelectorAll(".box")
 
 // take the word for guess
 getWord().then(response => (
-    word = response.toUpperCase(),
-    word2 = word.split("")
+    word = response.toUpperCase()
     ));
 
 // keyboard listener
-for (let i=0; i < keyboard.length;i++) keyboard[i].addEventListener("click",(e)=>getKeyboard(e));
+for (let i=0; i < keyboard.length;i++) keyboard[i].addEventListener("click",(e)=>getKeyboard(e)); // each press of keyboard
 
 // function for getting keyboard in the website
 function getKeyboard(e){
@@ -38,7 +37,7 @@ function getKeyboard(e){
         btnAudio.load();
         btnAudio.play();
         setTimeout(() => {btnAudio.pause()},200);
-        
+        console.log(temp,a,c)
 
     }
   
@@ -79,10 +78,10 @@ function contoller(){
             box[i+c].style.background = "#88B04B"
             box[i+c].style.border = "#88B04B"
             rightanswer[i] = word[i];
-            word2[i] = "";
+            word[i] = "";
         }
 
-        else if(word2.includes(box[i+c].textContent)){
+        else if(word.includes(box[i+c].textContent)){
             box[i+c].style.background = "#EFC050"
             box[i+c].style.border = "#EFC050"
         }
