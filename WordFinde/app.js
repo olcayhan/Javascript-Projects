@@ -15,6 +15,9 @@ const generator = document.querySelector(".generator");
 const keyboard = document.querySelectorAll(".buttons");
 const box = document.querySelectorAll(".box")
 
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+
+
 // take the word for guess
 getWord().then(response => (
     word = response.toUpperCase()
@@ -68,12 +71,16 @@ function getWord(){
     .then(response => response[0]);
 }
 
-// function for checking gueesed letter true, false or letter in word but wrong box.
-function contoller(){ 
-    
-    setTimeout(()=>{rightanswer = [];
-    for(let i =0; i<6;i++){
 
+
+// function for checking gueesed letter true, false or letter in word but wrong box.
+async function contoller(){ 
+    
+    rightanswer = [];
+    for(let i =0; i<6;i++){
+        console.log(Date.now)
+        await sleep(250);
+        console.log(Date.now)
         if(box[i+c].textContent == word[i]){
             box[i+c].style.background = "#88B04B"
             box[i+c].style.border = "#88B04B"
@@ -86,21 +93,25 @@ function contoller(){
             box[i+c].style.border = "#EFC050"
         }
         else{
+            
             wronganswer.push(box[i+c].textContent);
             box[i+c].style.background = "#787c7e"
             box[i+c].style.border = "#787c7e"
-            for(let i =0;i<keyboard.length;i++) if (wronganswer.includes(keyboard[i].id)) keyboard[i].style.background="#787c7e" ;
+            for(let i =0;i<keyboard.length;i++) if (wronganswer.includes(keyboard[i].id)) keyboard[i].style.background="#787c7e" ; 
         }
+            
+        
     }
-    c +=6;
+    c += 6
     console.log("Controller Working");
     if (rightanswer.join('') == word || c == 30) Overtester();
-    },100)
+    
     
 }
 
 // function for checking player won or lose
-function Overtester(){
+async function Overtester(){
+    await sleep(1000);
     console.log("Overtester Worked");
     
     var div = document.createElement("div");
