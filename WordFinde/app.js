@@ -1,7 +1,4 @@
 // declaration
-let btnAudio = new Audio('https://www.soundjay.com/communication/sounds/typewriter-key-1.mp3') // sound effect for a keyboard button
-let okAudio = new Audio('https://www.soundjay.com/communication/sounds/cassette-eject-1.mp3') // sound effect for ok button on keyboard
-let delAudio = new Audio('https://www.soundjay.com/communication/sounds/tape-recorder-eject-1.mp3') // sound effect for del button on keyboard
 let rightanswer = []; // a list for right answer
 let wronganswer = []; // a list for wrong answer
 let c =0 // counter for controller function which is keep game is where. 
@@ -44,17 +41,11 @@ function getKeyboard(e){
             a++;
         }
         else temp = 6;
-        btnAudio.load();
-        btnAudio.play();
-        setTimeout(() => {btnAudio.pause()},200);
-        console.log(temp,a,c)
-
     }
   
     if (temp ==6 && e.target.id == "ok"){
-        temp -= 6;
         contoller();
-        okAudio.play();
+        temp -= 6;
 
     }
 
@@ -62,11 +53,7 @@ function getKeyboard(e){
         if (a>0 && temp>0){
             a--;
             temp--;
-            box[a].innerHTML = "";
-            delAudio.load();
-            delAudio.play();
-            setTimeout(() => {delAudio.pause();},150);
-            
+            box[a].innerHTML = "";    
         } 
     }
 }
@@ -83,9 +70,7 @@ async function contoller(){
     
     rightanswer = [];
     for(let i =0; i<6;i++){
-        console.log(Date.now)
         await sleep(250);
-        console.log(Date.now)
         if(box[i+c].textContent == word[i]){
             box[i+c].style.background = "#88B04B";
             box[i+c].style.border = "#88B04B";
@@ -129,11 +114,10 @@ async function Overtester(){
     div.id = "gameOver";
 
     if(rightanswer.join('') == word){
-        console.log(c)
-        div.innerHTML = `Congrualtions!!  <br> ${word} <br> you achieved at ${c/6} .step <br> your point = ${120-(c/6)*20}`;
+        div.innerHTML = `<h1>Congrualtions!!</h1> <h2>${word}</h2> <h2>you achieved at ${c/6} .step</h2> <h2>your point = ${120-(c/6)*20}</h2>`;
         div.style.background= "#00A170";
     }
-    else div.innerHTML = `Unlucky!! <br>  Try Again <br><br> ${word}`;
+    else div.innerHTML = `<h1>Unlucky!!</h1> <h2>Try Again<h2> <h2>${word}</h2>`;
     document.getElementById("endGame").appendChild(div);
 
     var btn = document.createElement("button")

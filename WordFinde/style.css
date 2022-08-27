@@ -215,42 +215,47 @@ body.dark {
 
 /* game over section */
 .endGame .gameOver{
-    padding-top:20px ;
     color: #fff;
     width: 600px;
     height: 550px;
     background:crimson;
     position: absolute;
-    top: 52%;
+    top: 56%;
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 10px;
     font-family:"Permanent Marker",sans-serif;
-    font-size: 45px;
     text-align: center;
     opacity: 0.98;
 }
 
 .endGame .gameBtn{
-    width: 180px;
-    height: 80px;
-    background: #363945;
+    width: 160px;
+    height: 60px;
+    background: #7FB77E;
     color: #fff;
     position: fixed;
-    top: 80%;
+    top: 75%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-family:"Permanent Marker",sans-serif;
-    font-size: 30px;
+    font-size: 25px;
     text-align: center;
     border-radius: 10px;
  
 }
+.endGame h1{
+    font-size: 50px;
+}
+.endGame h2{
+    font-size: 40px;
+}
+
 .endGame .gameBtn:hover{
     border: #fff;
     border-style:inset;
-    background: #9A8B4F;
-    color: #fff;
+    background: #fff;
+    color: #7FB77E;
 }
 
 /* media section */
