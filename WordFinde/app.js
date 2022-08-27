@@ -82,8 +82,9 @@ async function contoller(){
         await sleep(250);
         console.log(Date.now)
         if(box[i+c].textContent == word[i]){
-            box[i+c].style.background = "#88B04B"
-            box[i+c].style.border = "#88B04B"
+            box[i+c].style.background = "#88B04B";
+            box[i+c].style.border = "#88B04B";
+            box[i+c].style.transition = "all 0.3s ease-out";
             rightanswer[i] = word[i];
             word[i] = "";
         }
@@ -91,12 +92,16 @@ async function contoller(){
         else if(word.includes(box[i+c].textContent)){
             box[i+c].style.background = "#EFC050"
             box[i+c].style.border = "#EFC050"
+            box[i+c].style.transition = "all 0.3s ease-out";
+
         }
         else{
             
             wronganswer.push(box[i+c].textContent);
             box[i+c].style.background = "#787c7e"
             box[i+c].style.border = "#787c7e"
+            box[i+c].style.transition = "all 0.3s ease-out";
+
             for(let i =0;i<keyboard.length;i++) if (wronganswer.includes(keyboard[i].id)) keyboard[i].style.background="#787c7e" ; 
         }
             
@@ -120,7 +125,7 @@ async function Overtester(){
 
     if(rightanswer.join('') == word){
         console.log(c)
-        div.innerHTML = `Congrualtions!! <br>You are a Winner <br><br> ${word} <br> you achieved ${c/6} .step <br> your point = ${120-(c/6)*20}`;
+        div.innerHTML = `Congrualtions!! <br>You are a Winner <br><br> ${word} <br> you achieved at ${c/6} .step <br> your point = ${120-(c/6)*20}`;
         div.style.background= "#00A170";
     }
     else div.innerHTML = `Unlucky!! <br>  Try Again <br><br> ${word}`;
@@ -133,6 +138,5 @@ async function Overtester(){
     document.getElementById("endGame").appendChild(btn)
    
     var btnTo = document.getElementById("gameBtn")
-    btnTo.addEventListener("click",()=>{location.reload();
-    })
+    btnTo.addEventListener("click",()=>{location.reload()}); //reload the screen for play again
 }
