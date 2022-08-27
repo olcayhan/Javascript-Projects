@@ -2,11 +2,11 @@
 let btnAudio = new Audio('https://www.soundjay.com/communication/sounds/typewriter-key-1.mp3') // sound effect for a keyboard button
 let okAudio = new Audio('https://www.soundjay.com/communication/sounds/cassette-eject-1.mp3') // sound effect for ok button on keyboard
 let delAudio = new Audio('https://www.soundjay.com/communication/sounds/tape-recorder-eject-1.mp3') // sound effect for del button on keyboard
-var rightanswer = []; // a list for right answer
-var wronganswer = []; // a list for wrong answer
-var c =0 // counter for controller function which is keep game is where. 
-var a=0; // counter for all press in all boxes
-var temp =0; // counter for all press in boxes at each row
+let rightanswer = []; // a list for right answer
+let wronganswer = []; // a list for wrong answer
+let c =0 // counter for controller function which is keep game is where. 
+let a = 0; // counter for all press in all boxes
+let temp =0; // counter for all press in boxes at each row
 let word; // word for guessing
 
 
@@ -21,11 +21,10 @@ const sleep = ms => new Promise(r => setTimeout(r, ms));
 
 const checkbox = document.getElementById('checkbox');
 
-checkbox.addEventListener('change', ()=>{
-  document.body.classList.toggle('dark');
-})
+// dark mode button, if you want ot switch between dark and light mode
+checkbox.addEventListener('change', ()=>{document.body.classList.toggle('dark');})
 
-
+// a button function to start game
 enterBtn.addEventListener("click",()=>{enterPage.parentNode.removeChild(enterPage);})
 
 // take the word for guess
@@ -131,7 +130,7 @@ async function Overtester(){
 
     if(rightanswer.join('') == word){
         console.log(c)
-        div.innerHTML = `Congrualtions!! <br>You are a Winner <br><br> ${word} <br> you achieved at ${c/6} .step <br> your point = ${120-(c/6)*20}`;
+        div.innerHTML = `Congrualtions!!  <br> ${word} <br> you achieved at ${c/6} .step <br> your point = ${120-(c/6)*20}`;
         div.style.background= "#00A170";
     }
     else div.innerHTML = `Unlucky!! <br>  Try Again <br><br> ${word}`;

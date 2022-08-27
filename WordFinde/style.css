@@ -1,5 +1,5 @@
 body{
-    background: #F5E8C7;
+    background: #E9DAC1;
     transition: all 0.3s linear;
 }
 
@@ -156,21 +156,79 @@ body.dark {
 
 
 
+/* enter page section */
+
+.enterPage{
+    margin-left: 30%;
+    width: 600px;
+    height: 550px;
+    background:#256D85;
+    font-family:"Permanent Marker",sans-serif;
+    border-radius: 15px;
+    position:absolute;
+    color: #fff;
+    opacity: 0.98;
+}
+.enterPage h1{
+    margin-top: 45px;
+    font-size: 50px;
+    text-align: center;
+    
+}
+.enterPage h2{
+    margin-top: 0px;
+    font-size: 50px;
+    text-align: center;
+    color: #E64848;
+    
+}
+.enterPage p{
+    font-size: 25px;
+    text-align: center;
+}
+.enterPage h2 span{
+    color: #56C6A9;
+}
+.enterPage .enterBtn{
+    border: #7FB77E;
+    margin-top: 25px;
+    width: 120px;
+    height: 60px;
+    background: #7FB77E;
+    color: #fff;
+    font-family:"Permanent Marker",sans-serif;
+    font-size: 30px;
+    text-align: center;
+    border-radius: 10px;
+    margin-left: 40%;
+    
+}
+
+.enterPage .enterBtn:hover{
+    border: #7FB77E;
+    background: #fff;
+    color: #7FB77E;
+}
+
+
+
+
 /* game over section */
 .endGame .gameOver{
     padding-top:20px ;
     color: #fff;
-    height: 75%;
-    width: 620px;
+    width: 600px;
+    height: 550px;
     background:crimson;
-    position: fixed;
+    position: absolute;
     top: 52%;
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 10px;
     font-family:"Permanent Marker",sans-serif;
-    font-size: 50px;
+    font-size: 45px;
     text-align: center;
+    opacity: 0.98;
 }
 
 .endGame .gameBtn{
@@ -194,65 +252,6 @@ body.dark {
     background: #9A8B4F;
     color: #fff;
 }
-
-/* enter page section */
-
-.enterPage{
-    margin-left: 30%;
-    width: 600px;
-    height: 540px;
-    background:#9A8B4F;
-    opacity: 1;
-    font-family:"Permanent Marker",sans-serif;
-    border-radius: 15px;
-    border-style: solid;
-    position:absolute;
-    color: #fff;
-}
-.enterPage h1{
-    margin-top: 45px;
-    font-size: 50px;
-    text-align: center;
-    
-}
-.enterPage h2{
-    margin-top: 0px;
-    font-size: 50px;
-    text-align: center;
-    color: #A2242F;
-    
-}
-.enterPage p{
-    font-size: 25px;
-    text-align: center;
-}
-.enterPage h2 span{
-    color: #56C6A9;
-}
-.enterPage .enterBtn{
-    margin-top: 25px;
-    width: 120px;
-    height: 60px;
-    background: #363945;
-    color: #fff;
-    font-family:"Permanent Marker",sans-serif;
-    font-size: 30px;
-    text-align: center;
-    border-radius: 10px;
-    margin-left: 40%;
-}
-
-
-
-.enterPage .enterBtn:hover{
-    border: #fff;
-
-    background: #A2242F;
-    color: #fff;
-}
-
-
-
 
 /* media section */
 @media (max-width: 1300px){
