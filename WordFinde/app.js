@@ -13,15 +13,23 @@ let word; // word for guessing
 // load queries
 const generator = document.querySelector(".generator");
 const keyboard = document.querySelectorAll(".buttons");
-const box = document.querySelectorAll(".box")
+const box = document.querySelectorAll(".box");
+const enterBtn = document.querySelector(".enterBtn");
+const enterPage = document.querySelector(".enterPage");
 
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 
+const checkbox = document.getElementById('checkbox');
+
+checkbox.addEventListener('change', ()=>{
+  document.body.classList.toggle('dark');
+})
+
+
+enterBtn.addEventListener("click",()=>{enterPage.parentNode.removeChild(enterPage);})
 
 // take the word for guess
-getWord().then(response => (
-    word = response.toUpperCase()
-    ));
+getWord().then(response => (word = response.toUpperCase()));
 
 // keyboard listener
 for (let i=0; i < keyboard.length;i++) keyboard[i].addEventListener("click",(e)=>getKeyboard(e)); // each press of keyboard
@@ -70,8 +78,6 @@ function getWord(){
     .then(response => response.json())
     .then(response => response[0]);
 }
-
-
 
 // function for checking gueesed letter true, false or letter in word but wrong box.
 async function contoller(){ 

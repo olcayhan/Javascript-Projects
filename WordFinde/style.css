@@ -1,17 +1,79 @@
 body{
-    background: #363945;
+    background: #F5E8C7;
+    transition: all 0.3s linear;
 }
-.title-h1{
+
+body.dark {
+    background-color: #292c35;
+  }
+/* navbar section */
+
+.navbar{
+    display:flex;
+    justify-content:center;
+    
+}
+
+
+/* title section */
+.navbar .title-h1{
     color:  #A2242F;
     text-align: center;
     font-family: 'Rubik Dirt',sans-serif;
     font-size: 50px;
     font-weight: 500;
+    align-items: center;
 
 }
-.title-h1 span{
+.navbar .title-h1 span{
     color: #56C6A9;
 }
+
+/* dark mode section */
+
+.navbar .darkmode{
+    margin-top: 45px;
+    margin-left:75%;
+    position: absolute;
+}
+
+.navbar .darkmode .checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+.navbar .darkmode .label {
+    width: 40px;
+    height: 17px;
+    background-color:#111;
+    display: flex;
+    border-radius:50px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    position: relative;
+    transform: scale(1.5);
+}
+.navbar .darkmode .ball{
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    border-radius: 50%;
+    transition: transform 0.3s linear;
+  }
+  .navbar .darkmode .checkbox:checked + .label .ball{
+    transform: translateX(24px);
+  }
+  .navbar .darkmode .fa-moon {
+    color: pink;
+  }
+  
+  .navbar .darkmode .fa-sun {
+    color: yellow;
+  }
 
 /* container section */
 .container .row{
@@ -136,16 +198,15 @@ body{
 /* enter page section */
 
 .enterPage{
-    
-    margin-top: 8%;
     margin-left: 30%;
     width: 600px;
-    height: 500px;
-    background:#FFA500;
-    opacity: 0.9;
+    height: 540px;
+    background:#9A8B4F;
+    opacity: 1;
     font-family:"Permanent Marker",sans-serif;
     border-radius: 15px;
-    position: fixed;
+    border-style: solid;
+    position:absolute;
     color: #fff;
 }
 .enterPage h1{
@@ -186,7 +247,7 @@ body{
 .enterPage .enterBtn:hover{
     border: #fff;
 
-    background: #9A8B4F;
+    background: #A2242F;
     color: #fff;
 }
 
