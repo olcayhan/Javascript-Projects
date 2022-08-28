@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- load font families and connect css -->
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
     <title>WordFinde</title>
@@ -8,25 +9,46 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@600&family=Ubuntu&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Rubik+Dirt&display=swap" rel="stylesheet">
-    
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
 
 </head>
 <body>
+    <!-- navbar section -->
     <nav class="navbar">
+        <div id="country-select">
+            <div class="select-lang">
+                <div class="options">
+                    <div class="option" id="lang1">
+                        <input type="radio" name="flag" id="france" checked />
+                        <label for="france">
+                            <img src="https://www.olkando.com/wp-content/uploads/2016/09/cropped-tc-bayrak-1.png" alt="" />
+                        </label>
+                    </div>
+                    <div class="option" id="lang2">
+                        <input type="radio" name="flag" id="unitedKingdom" />
+                        <label for="unitedKingdom">
+                            <img src="https://media.istockphoto.com/vectors/united-states-flag-vector-round-flat-icon-vector-id841938104?k=20&m=841938104&s=170667a&w=0&h=ak4tPUguvIF-VJAAkGysoSwrUAdGSlg6RxSIILI_VwM=" alt="" />
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-    <h1 class="title-h1">Word<span>Finde</span></h1>
+        <h1 class="title-h1">Word<span>Finde</span></h1>
 
-    <div class="darkmode">
-        <input type="checkbox" class="checkbox" id="checkbox">
-        <label for="checkbox" class="label">
-        <i class="fa-solid fa-moon"></i>
-        <i class='fas fa-sun'></i>
-        <div class='ball'></div>
-      </label>
-    </div>
+        <div class="darkmode">
+            <input type="checkbox" class="checkbox" id="checkbox">
+            <label for="checkbox" class="label">
+                <i class="fa-solid fa-moon"></i>
+                <i class='fas fa-sun'></i>
+                <div class='ball'></div>
+            </label>
+        </div>     
     </nav>
+
+    <!-- enter page section -->
 
     <div class="enterPage">
         <h1>Hello Welcome the</h1>
@@ -35,9 +57,10 @@
         <button class="enterBtn">Start</button>
     </div>
 
+    <!-- container section -->
+
     <div class="container">
         <div class="row" id="row1">
-            <div class="box"></div>
             <div class="box"></div>
             <div class="box"></div>
             <div class="box"></div>
@@ -51,11 +74,9 @@
             <div class="box"></div>
             <div class="box"></div>
             <div class="box"></div>
-            <div class="box"></div>
             
         </div>
         <div class="row" id="row3">
-            <div class="box"></div>
             <div class="box"></div>
             <div class="box"></div>
             <div class="box"></div>
@@ -69,11 +90,9 @@
             <div class="box"></div>
             <div class="box"></div>
             <div class="box"></div>
-            <div class="box"></div>
             
         </div>
         <div class="row" id="row5">
-            <div class="box"></div>
             <div class="box"></div>
             <div class="box"></div>
             <div class="box"></div>
@@ -86,6 +105,7 @@
     </div>
 
 
+    <!-- keyboard section -->
 
     <div class="keyboard">
         <div class="words">
@@ -125,8 +145,18 @@
   
         </div>
     </div>
+    
+    <!-- github section -->
+    <div class="github">
+        <a href="https://github.com/olcayhan/Javascript-Projects" style="color:black;"><i class="fa-brands fa-github fa-2x"></i></a>
+    </div>   
 
+    <!-- end game section -->
     <div class="endGame" id="endGame"></div>
+
+    
+
+    <!-- load icons and script -->
     <script src="https://kit.fontawesome.com/10341b6ea1.js" crossorigin="anonymous"></script>
     <script src="app.js"></script>
 </body>

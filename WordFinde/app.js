@@ -36,20 +36,20 @@ function getKeyboard(e){
     
     if(e.target.id != "del" && e.target.id != "ok"){
         temp++;
-        if (temp<=6){
+        if (temp<=5){
             box[a].innerHTML = e.target.id;
             a++;
         }
-        else temp = 6;
+        else temp = 5;
     }
   
-    if (temp ==6 && e.target.id == "ok"){
+    if (temp ==5 && e.target.id == "ok"){
         contoller();
-        temp -= 6;
+        temp -= 5;
 
     }
 
-    if(e.target.id == "del" && temp <=6){
+    if(e.target.id == "del" && temp <=5){
         if (a>0 && temp>0){
             a--;
             temp--;
@@ -60,7 +60,7 @@ function getKeyboard(e){
 
 // function for getting word with API on the server.
 function getWord(){
-    return fetch("https://random-word-api.herokuapp.com/word?length=6")
+    return fetch("https://random-word-api.herokuapp.com/word?length=5")
     .then(response => response.json())
     .then(response => response[0]);
 }
@@ -69,7 +69,7 @@ function getWord(){
 async function contoller(){ 
     
     rightanswer = [];
-    for(let i =0; i<6;i++){
+    for(let i =0; i<5;i++){
         await sleep(250);
         if(box[i+c].textContent == word[i]){
             box[i+c].style.background = "#88B04B";
@@ -97,9 +97,9 @@ async function contoller(){
             
         
     }
-    c += 6
+    c += 5
     console.log("Controller Working");
-    if (rightanswer.join('') == word || c == 30) Overtester();
+    if (rightanswer.join('') == word || c == 25) Overtester();
     
     
 }
@@ -114,7 +114,7 @@ async function Overtester(){
     div.id = "gameOver";
 
     if(rightanswer.join('') == word){
-        div.innerHTML = `<h1>Congrualtions!!</h1> <h2>${word}</h2> <h2>you achieved at ${c/6} .step</h2> <h2>your point = ${120-(c/6)*20}</h2>`;
+        div.innerHTML = `<h1>Congrualtions!!</h1> <h2>${word}</h2> <h2>you achieved at ${c/5} .step</h2> <h2>your point = ${120-(c/5)*20}</h2>`;
         div.style.background= "#00A170";
     }
     else div.innerHTML = `<h1>Unlucky!!</h1> <h2>Try Again<h2> <h2>${word}</h2>`;
