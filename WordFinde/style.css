@@ -17,67 +17,6 @@ body.dark {
 }
 
 
-/* language section */
-
-#country-select {
-    position: relative;
-    top: 60px;
-    right: 500px;
-}
-.select-lang {
-    width: 80px;
-    height: 40px;
-    position: relative;
-    overflow: hidden;
-}
-
-
-.select-lang:hover {
-    overflow:visible;
-}
-.select-lang:hover .options .option {
-    padding: 0 0 5px 0;
-}
-.select-lang:hover .options .option:last-child {
-    padding: 0 0 0 0;
-}
-
-.select-lang:hover .options .option label {
-    display:inline-block;
-    cursor: pointer
-}
-
-.select-lang .options .option img {
-    width: 40px;
-    height: 40px;
-    border-radius: 40px;
-
-}
-
-.select-lang .options .option label {
-    display:none;
-}
-
-.select-lang .options .option input {
-    width:0;
-    height:0;
-    overflow:hidden;
-    margin:0;
-    padding:0;
-    display:inline-block;
-    position: absolute;
-    visibility: hidden;
-}
-
-.select-lang .options .option input:checked + label {
-    display:block;
-    width:100%;
-}
-
-.select-lang:hover .options .option input + label {
-    display:block;
-}
-
 
 /* title section */
 .navbar .title-h1{
@@ -330,26 +269,37 @@ body.dark {
         margin-left:32%;
     }
     .keyboard{
-        margin-left:19%;
+        margin-left:20%;
         
     }
-    
+    .enterPage{
+        margin-left: 21%;
+    }
+    .github{
+        margin-top: 20px;
+    }
 }
 @media (max-width: 947px){
     .keyboard{
-        height: 190px;
-        width: 500px;
-        margin-left: 200px;
+        height: 300px;
+        width: 800px;
+        margin-left: 8px;
     }
     .container .row {
         margin-left:32%;
     }
     .keyboard .words .buttons{
-        width: 40px;
-        height: 40px;
+        width: 60px;
+        height: 60px;
         font-size: 18px;
-        margin-left: 9px;
+        margin-left: 20px;
+        margin-top: 5px;
     }
+    .enterPage{
+        margin-left: 18%;
+    }
+    
+ 
 }
 
 
@@ -357,7 +307,7 @@ body.dark {
     .keyboard{
         height: 180px;
         width: 480px;
-        margin-left: 4%;
+        margin-left: 10%;
     }
     .container .row {
         margin-left:20%;
@@ -367,6 +317,12 @@ body.dark {
         height: 37px;
         font-size: 16px;
         margin-left: 10px;
+    }
+    .enterPage{
+        margin-left: 15px;
+    }
+    .github{
+        margin-top: 20px;
     }
 }
 
@@ -385,5 +341,17 @@ body.dark {
         height: 37px;
         font-size: 16px;
         margin-left: 10px;
+        margin-top: 0px;
+    }
+    .enterPage{
+        margin-left: 0px;
+        width: 480px;
+    }
+    .github{
+        margin-top: 150px;
+    }
+    .navbar .darkmode{
+        margin-left: 100%;
     }
 }
+

@@ -13,13 +13,14 @@ const keyboard = document.querySelectorAll(".buttons");
 const box = document.querySelectorAll(".box");
 const enterBtn = document.querySelector(".enterBtn");
 const enterPage = document.querySelector(".enterPage");
+const github = document.querySelector(".githuba")
 
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 
 const checkbox = document.getElementById('checkbox');
 
 // dark mode button, if you want ot switch between dark and light mode
-checkbox.addEventListener('change', ()=>{document.body.classList.toggle('dark');})
+checkbox.addEventListener('change', ()=>{document.body.classList.toggle('dark'),github.style.color="white"})
 
 // a button function to start game
 enterBtn.addEventListener("click",()=>{enterPage.parentNode.removeChild(enterPage);})
@@ -129,3 +130,4 @@ async function Overtester(){
     var btnTo = document.getElementById("gameBtn")
     btnTo.addEventListener("click",()=>{location.reload()}); //reload the screen for play again
 }
+
