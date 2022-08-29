@@ -19,63 +19,130 @@
 
    <!--  container section -->
     <div class="container">
-        <div class="currencies">
-            <div id="TRY" class="currency">
-                <button type="button" class="btn btn-outline-dark">TRY</button>
-            </div>
-            <div class="currency" id="USD">
-                <button type="button" class="btn btn-outline-dark">USD</button>
+            <div class="screen">
+                <div class="input-group">
+                    <select class="form-select" id="inputSlct" aria-label="Example select with button addon">
+                        <option value="AED">AED</option>
+                        <option value="ARS">ARS</option>
+                        <option value="AUD">AUD</option>
+                        <option value="BGN">BGN</option>
+                        <option value="BRL">BRL</option>
+                        <option value="BSD">BSD</option>
+                        <option value="CAD">CAD</option>
+                        <option value="CHF">CHF</option>
+                        <option value="CLP">CLP</option>
+                        <option value="CNY">CNY</option>
+                        <option value="COP">COP</option>
+                        <option value="CZK">CZK</option>
+                        <option value="DKK">DKK</option>
+                        <option value="DOP">DOP</option>
+                        <option value="EGP">EGP</option>
+                        <option value="EUR" selected>EUR</option>
+                        <option value="FJD">FJD</option>
+                        <option value="GBP">GBP</option>
+                        <option value="GTQ">GTQ</option>
+                        <option value="HKD">HKD</option>
+                        <option value="HRK">HRK</option>
+                        <option value="HUF">HUF</option>
+                        <option value="IDR">IDR</option>
+                        <option value="ILS">ILS</option>
+                        <option value="INR">INR</option>
+                        <option value="ISK">ISK</option>
+                        <option value="JPY">JPY</option>
+                        <option value="KRW">KRW</option>
+                        <option value="KZT">KZT</option>
+                        <option value="MXN">MXN</option>
+                        <option value="MYR">MYR</option>
+                        <option value="NOK">NOK</option>
+                        <option value="NZD">NZD</option>
+                        <option value="PAB">PAB</option>
+                        <option value="PEN">PEN</option>
+                        <option value="PHP">PHP</option>
+                        <option value="PKR">PKR</option>
+                        <option value="PLN">PLN</option>
+                        <option value="PYG">PYG</option>
+                        <option value="RON">RON</option>
+                        <option value="RUB">RUB</option>
+                        <option value="SAR">SAR</option>
+                        <option value="SEK">SEK</option>
+                        <option value="SGD">SGD</option>
+                        <option value="THB">THB</option>
+                        <option value="TRY">TRY</option>
+                        <option value="TWD">TWD</option>
+                        <option value="UAH">UAH</option>
+                        <option value="USD">USD</option>
+                        <option value="UYU">UYU</option>
+                        <option value="VND">VND</option>
+                        <option value="ZAR">ZAR</option>
+                    </select>
+                    <input type="text" class="form-control" id = "input" aria-label="Text input with segmented dropdown button">
+                  </div>
             </div>
             
-            <div class="currency" id="EUR">
-                <button type="button" class="btn btn-outline-dark">EUR</button>
+            <button class="exchangeBtn"><i class="fa-solid fa-right-left fa-rotate-270 "></i></button>
+            <button class="translate"><i class="fa-solid fa-angle-down"></i></button>
+   
+            <div class="screen">
+                <div class="input-group mb-3">
+                    <select class="form-select" id="outputSlct">
+                        <option value="AED">AED</option>
+                        <option value="ARS">ARS</option>
+                        <option value="AUD">AUD</option>
+                        <option value="BGN">BGN</option>
+                        <option value="BRL">BRL</option>
+                        <option value="BSD">BSD</option>
+                        <option value="CAD">CAD</option>
+                        <option value="CHF">CHF</option>
+                        <option value="CLP">CLP</option>
+                        <option value="CNY">CNY</option>
+                        <option value="COP">COP</option>
+                        <option value="CZK">CZK</option>
+                        <option value="DKK">DKK</option>
+                        <option value="DOP">DOP</option>
+                        <option value="EGP">EGP</option>
+                        <option value="EUR">EUR</option>
+                        <option value="FJD">FJD</option>
+                        <option value="GBP">GBP</option>
+                        <option value="GTQ">GTQ</option>
+                        <option value="HKD">HKD</option>
+                        <option value="HRK">HRK</option>
+                        <option value="HUF">HUF</option>
+                        <option value="IDR">IDR</option>
+                        <option value="ILS">ILS</option>
+                        <option value="INR">INR</option>
+                        <option value="ISK">ISK</option>
+                        <option value="JPY">JPY</option>
+                        <option value="KRW">KRW</option>
+                        <option value="KZT">KZT</option>
+                        <option value="MXN">MXN</option>
+                        <option value="MYR">MYR</option>
+                        <option value="NOK">NOK</option>
+                        <option value="NZD">NZD</option>
+                        <option value="PAB">PAB</option>
+                        <option value="PEN">PEN</option>
+                        <option value="PHP">PHP</option>
+                        <option value="PKR">PKR</option>
+                        <option value="PLN">PLN</option>
+                        <option value="PYG">PYG</option>
+                        <option value="RON">RON</option>
+                        <option value="RUB">RUB</option>
+                        <option value="SAR">SAR</option>
+                        <option value="SEK">SEK</option>
+                        <option value="SGD">SGD</option>
+                        <option value="THB">THB</option>
+                        <option value="TRY" selected>TRY</option>
+                        <option value="TWD">TWD</option>
+                        <option value="UAH">UAH</option>
+                        <option value="USD">USD</option>
+                        <option value="UYU">UYU</option>
+                        <option value="VND">VND</option>
+                        <option value="ZAR">ZAR</option>
+                    </select>                    
+                    <input type="text" class="form-control" id = "output" aria-label="Text input with segmented dropdown button">
+                </div>
             </div>
-            <div class="currency" id="GBP">
-                <button type="button" class="btn btn-outline-dark">GBP</button>
-            </div>
-            <div class="currency" id="BTC">
-                <button type="button" class="btn btn-outline-dark">BTC</button>
-            </div>
-            <div class="currency" id="ETH">
-                <button type="button" class="btn btn-outline-dark">ETH</button>
-            </div>
-            
-        </div>
-
-        <div class="currencies">
-            <div id="TRY" class="currency">
-                <button type="button" class="btn btn-outline-dark">TRY</button>
-            </div>
-            <div class="currency" id="USD">
-                <button type="button" class="btn btn-outline-dark">USD</button>
-            </div>
-            
-            <div class="currency" id="EUR">
-                <button type="button" class="btn btn-outline-dark">EUR</button>
-            </div>
-            <div class="currency" id="GBP">
-                <button type="button" class="btn btn-outline-dark">GBP</button>
-            </div>
-            <div class="currency" id="BTC">
-                <button type="button" class="btn btn-outline-dark">BTC</button>
-            </div>
-            <div class="currency" id="ETH">
-                <button type="button" class="btn btn-outline-dark">ETH</button>
-            </div>
-            
-        </div>
-
-
-
-        <div class="display">
-            <div class="currencytext"></div>
-            <div class="screen"></div>
-
-            <div class="exchange"> <button class="exchangeBtn"><i class="fa-solid fa-right-left fa-rotate-270 "></i></button></div>
-
-            <div class="currencytext"></div>
-            <div class="screen"></div>
-        </div>
+          
+        
 
     </div>
     <script src="https://kit.fontawesome.com/10341b6ea1.js" crossorigin="anonymous"></script>
