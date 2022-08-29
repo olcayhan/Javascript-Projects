@@ -1,0 +1,71 @@
+body{
+    background:#9ED2C6;
+}
+.navbar h1{
+    color: #A10035;
+    margin-left: 20px;
+}
+.navbar h1 span{
+    color: #3FA796;
+}
+
+.container{
+    height: 600px;
+    width:1000px;
+    background:#3FA796;
+    margin-top: 50px;
+    border-radius: 50px;
+}
+.container .currencies{
+    display:inline-block; 
+    margin-left: 30px;
+    
+}
+.container .currencies .currency button{
+    width: 110px;
+    height: 50px;
+    margin-top: 40px;
+    background: #E9DAC1;
+}
+
+
+/* display section */
+.container .display{
+    margin-left: 100px;
+    margin-top: 40px;
+    width: 500px;
+    height: 500px;
+    background-color: #E9DAC1;
+    display:inline-block; 
+    position: absolute;
+    border-radius: 40px;
+}
+
+.container .display .currencytext{
+    width: 100px;
+    height: 80px;
+    margin-left: 20px;
+    background-color: #3FA796;
+    margin-top: 60px;
+    position: absolute;
+    border-radius: 25px;
+}
+
+.container .display .screen{
+    background-color: #9ED2C6;
+    width: 300px;
+    height: 100px;
+    margin-top: 50px;
+    margin-left: 125px;
+    border-radius: 25px;
+}
+.container .display .exchange .exchangeBtn{
+    width: 60px;
+    height: 60px;
+    margin-top: 40px;
+    margin-left: 230px;
+    font-size: 35px;
+    background: #FEC260;
+    border-radius: 40px;
+    border: #3FA796;
+}
