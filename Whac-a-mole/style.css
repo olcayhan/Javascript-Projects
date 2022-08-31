@@ -1,0 +1,83 @@
+body{
+    background-color: #293462;
+}
+
+/* navbar section */
+.navbar{
+
+    height:90px;
+    width: 52%;
+    margin-left: 23%;
+    border-radius: 10px;
+    position: absolute;
+    background-color: #1CD6CE;
+    border-style: solid;
+    border-width: 3px;
+    opacity: 0.9;
+    
+}
+.score{
+    margin-left: 20px;
+    margin-top: 20px;
+    width: 200px;
+    height: 60px;
+    background-color: #1CD6CE;
+    position: absolute;
+    display:flex;
+    font-size: 22px;
+    font-family: "DynaPuff",sans-serif;
+    border-radius: 20px;
+    
+}
+.score p{
+    margin-top: 14px;
+    margin-left: 10px;
+}
+.score .point{
+    margin-top: 15px;
+    margin-left: 10px;
+    text-align: center;
+    
+}
+.navbar h1{
+    
+    text-align: center;
+    color: #D61C4E;
+    font-size: 40px;
+    font-family: "DynaPuff",sans-serif;
+    margin-top: 20px;
+    transform: scaleY(1.5);
+    
+}
+.navbar h1 span{
+    color: #111;
+}
+
+/* container section */
+.container{
+    width: 800px;
+    height: 510px;
+    background: #FEDB39;
+    position: absolute;
+    margin-left: 23%;
+    margin-top: 10%;
+    border-radius: 95px;
+    opacity: 0.9;
+    
+}
+
+.container .screen{
+    display:flex;
+    justify-content: space-evenly;
+    
+}
+.container .screen .hole{
+    background: #111;
+    width: 80px;
+    height: 80px;
+    margin-left: 10px;
+    margin-top: 70px;
+    border-radius: 45px;
+    box-shadow: 8px 8px 8px #A47E3B inset;
+    
+}
