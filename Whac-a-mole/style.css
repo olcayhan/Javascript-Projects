@@ -13,9 +13,23 @@ body{
     background-color: #1CD6CE;
     border-style: solid;
     border-width: 3px;
-    opacity: 0.9;
+    z-index: -1;
+}
+.navbar h1{
+    
+    text-align: center;
+    color: #D61C4E;
+    font-size: 40px;
+    font-family: "DynaPuff",sans-serif;
+    margin-top: 20px;
+    transform: scaleY(1.5);
     
 }
+.navbar h1 span{
+    color: #111;
+}
+
+/* score section */
 .score{
     margin-left: 20px;
     margin-top: 100px;
@@ -39,6 +53,7 @@ body{
     text-align: center;
     
 }
+/* counter section */
 .counter{
     margin-left: 20px;
     margin-top: 20px;
@@ -62,19 +77,30 @@ body{
     text-align: center;
     
 }
-.navbar h1{
-    
-    text-align: center;
-    color: #D61C4E;
-    font-size: 40px;
+
+/* start section */
+.start .startGame{
+    margin-left: 20px;
+    margin-top: 250px;
+    width: 200px;
+    height: 60px;
+    background-color: #1CD6CE;
+    display:flex;
+    position: absolute;
+    font-size: 22px;
     font-family: "DynaPuff",sans-serif;
-    margin-top: 20px;
-    transform: scaleY(1.5);
-    
+    border-radius: 20px;
+    cursor: pointer;
+    border: #1CD6CE;
 }
-.navbar h1 span{
-    color: #111;
+.start .startGame p{
+    text-align: center;
+    font-size: 50px;
+    margin-top: 0px;
+    margin-left: 20px;
+    color: #D61C4E;
 }
+
 
 /* container section */
 .container{
@@ -85,7 +111,7 @@ body{
     margin-left: 23%;
     margin-top: 10%;
     border-radius: 95px;
-    opacity: 0.9;
+    z-index: -1;
     
 }
 
@@ -104,6 +130,47 @@ body{
     box-shadow: 8px 8px 8px #A47E3B inset;
 }
 .container .screen .hole img{
-    width: 80px;
-    height: 85px;    
+    width: 110px;
+    height: 110px;    
+    position: absolute;
+    margin-top: -35px;
+    margin-left: -15px;
+}
+
+/* endgame section */
+
+.endGame .gameOver{
+    width: 800px;
+    height: 510px;
+    background-color: #D61C4E;
+    margin-left: 23%;
+    margin-top: 10%;
+    position: absolute;
+    opacity: 0.95;
+    border-radius: 25px;
+    font-family: "DynaPuff",sans-serif;
+    color: #1CD6CE;
+    text-align: center;
+
+
+}
+.endGame .gameOver p{
+    font-size: 50px;
+    margin-top: 20px;
+}
+.endGame .gameOver h1{
+    font-size: 60px;
+    margin-top: 40px; 
+}
+.endGame .gameOver button{
+    font-family: "DynaPuff",sans-serif;
+    width: 200px;
+    height: 70px;
+    background-color:#1CD6CE;
+    border-radius: 20px;
+    font-size: 35px;
+    color: white;
+    border: #1CD6CE;
+    cursor: pointer;
+
 }
