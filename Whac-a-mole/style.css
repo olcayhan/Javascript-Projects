@@ -18,7 +18,7 @@ body{
 }
 .score{
     margin-left: 20px;
-    margin-top: 20px;
+    margin-top: 100px;
     width: 200px;
     height: 60px;
     background-color: #1CD6CE;
@@ -34,6 +34,29 @@ body{
     margin-left: 10px;
 }
 .score .point{
+    margin-top: 15px;
+    margin-left: 10px;
+    text-align: center;
+    
+}
+.counter{
+    margin-left: 20px;
+    margin-top: 20px;
+    width: 200px;
+    height: 60px;
+    background-color: #1CD6CE;
+    display:flex;
+    position: absolute;
+    font-size: 22px;
+    font-family: "DynaPuff",sans-serif;
+    border-radius: 20px;
+    
+}
+.counter p{
+    margin-top: 14px;
+    margin-left: 10px;
+}
+.counter .time{
     margin-top: 15px;
     margin-left: 10px;
     text-align: center;
@@ -79,5 +102,8 @@ body{
     margin-top: 70px;
     border-radius: 45px;
     box-shadow: 8px 8px 8px #A47E3B inset;
-    
+}
+.container .screen .hole img{
+    width: 80px;
+    height: 85px;    
 }
