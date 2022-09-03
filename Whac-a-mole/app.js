@@ -4,18 +4,34 @@ let count = 0;
 let scoreNum = 0;
 let random = 0;
 let step = 0;
+let counter = 5;
 
-const counter = 30000;
-const second = 1000;
-const countDown = new Date().getTime() + counter;
+
 const start = document.querySelector(".startGame");
 const time = document.querySelector("#time");
 
 const score = document.querySelector(".point");
 const hole = document.querySelectorAll(".hole");
-const sleep = ms => new Promise(r => setTimeout(r, ms));
 const mole = document.createElement("img");
 
+const ball = document.querySelector(".ball");
+const body = document.querySelector("body");
+ball.addEventListener("click", clicked);
+
+function clicked() {
+  if (count == 0) {
+    ball.style.margin = "5px 0px 0px 50px";
+    ball.style.transition = "all 0.5s ease-out";
+    body.style.background = "#293462";
+    count++;
+  } else {
+    ball.style.margin = "5px 0px 0px 5px";
+    body.style.background = "#F3E0B5";
+    ball.style.transition = "all 0.5s ease-out"
+
+    count--;
+  }
+}
 
 
 
@@ -25,7 +41,6 @@ mole.addEventListener("click", scoreCounter);
 
 // a function to generate a mole on screen
 async function getMole(){
-    
     random = Math.floor(Math.random() * 15) + 1
     mole.src = "images/animal.png";
     document.getElementById(`hole${random}`).appendChild(mole);
@@ -34,22 +49,13 @@ async function getMole(){
     if(document.getElementById(`hole${random}`).innerText != "") document.getElementById(`hole${random}`).removeChild(mole);
 }
 // a function to get a mole a time
-async function getMoleaTime(){
+function getMoleaTime(){
 
-    setInterval(getTime, 0);
-
-    while(true){
-        await sleep(1000);
+setInterval(()=>{
         tester();
-   } 
-}
-// a function to get remainder
-function getTime(){
-    const now = new Date().getTime();
-    distance = (countDown + extra) - now;
+        time.innerText = counter;
+                },1000)
 
-    if(distance>0) time.innerText = Math.floor((distance) / second);
-    else distance = 0;
 }
 // a function to add score if click mole on screen. 
 function scoreCounter(){
@@ -61,7 +67,8 @@ function scoreCounter(){
 
 // a function to chech if play over.
 function tester(){
-    if (distance == 0 && step == 0){
+    if (counter == 0 && step == 0){
+
         var div = document.createElement("div");
         div.className = "gameOver";
         div.id= "gameOver";
@@ -73,16 +80,13 @@ function tester(){
         againBtn.innerText= "Play Again"
         document.getElementById("gameOver").appendChild(againBtn);
 
-
         const playAgain = document.querySelector(".againBtn");
-
         playAgain.addEventListener("click", () => {location.reload();})
-
-
-        step += 1
+        step = 1;
     }
-    else if(distance > 0) getMole();
-    else{
-        return;
+    else if(counter > 0) {
+        getMole();
+        counter -= 1;
     }
+   
 }
