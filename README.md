@@ -25,7 +25,9 @@ You can see that if your letters in correct position it's turn green or your let
 Whac-a-mole is a arcade game, you are strike mole in hole-out by hammer. The main purpose is doing best score at game. You can play this game with your kids, friends and whoever you want.
 
 ### Usage
+
 Click start to play game.
+
 ![image](https://user-images.githubusercontent.com/71206063/188267390-05766d7f-06b5-483f-b03b-afaf04efe31f.png)
 
 ##
@@ -45,6 +47,7 @@ You can press github icon for see the source code left-bottom in page at all gam
 ![image](https://user-images.githubusercontent.com/71206063/187089248-df193f50-cb92-4502-9c64-3479af6edf38.png)
 
 ## Contributing
+
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 ## Created by Olcay Han Korkut
