@@ -9,35 +9,34 @@ let counter = 60;
 
 const start = document.querySelector(".startGame");
 const time = document.querySelector("#time");
-
+const github = document.querySelector(".githuba");
 const score = document.querySelector(".point");
 const hole = document.querySelectorAll(".hole");
 const mole = document.createElement("img");
-
 const ball = document.querySelector(".ball");
 const body = document.querySelector("body");
-ball.addEventListener("click", clicked);
 
+ball.addEventListener("click", clicked);
+start.addEventListener("click", getMoleaTime);
+mole.addEventListener("click", scoreCounter);
+
+// a function to switch dark mode and light mode
 function clicked() {
   if (count == 0) {
     ball.style.margin = "5px 0px 0px 50px";
     ball.style.transition = "all 0.5s ease-out";
     body.style.background = "#293462";
+    github.style.color = "#fff";
     count++;
+
   } else {
     ball.style.margin = "5px 0px 0px 5px";
     body.style.background = "#F3E0B5";
     ball.style.transition = "all 0.5s ease-out"
-
+    github.style.color = "#111";
     count--;
   }
 }
-
-
-
-start.addEventListener("click", getMoleaTime);
-mole.addEventListener("click", scoreCounter);
-
 
 // a function to generate a mole on screen
 async function getMole(){
