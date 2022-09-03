@@ -4,7 +4,7 @@ let count = 0;
 let scoreNum = 0;
 let random = 0;
 let step = 0;
-let counter = 5;
+let counter = 60;
 
 
 const start = document.querySelector(".startGame");
