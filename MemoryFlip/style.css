@@ -2,26 +2,52 @@ body{
     background-color:#EEE3CB ;
 }
 
+/* title section */
+.title{
+    font-family: "Kalam",sans-serif;
+    font-size: 60px;
+    color: #483838;
+    position: absolute;
+    margin-left: 40px;
+}
+.title span{
+    color: #E94560;
+}
+
+
+
+/* card section */
 .flipscreen{
     width: 53%;
     height: 720px;
     background-color:#483838;
     margin-left: 20%;
     border-radius: 20px;
+    position: absolute;
+
 }
 .flipscreen .cards{
     width:100%;
-    height:160px;
+    height:220px;
     display: flex;
     flex-direction: row;
-    margin-top: 23px;
+    margin-top: 10px;
+    
     
 }
 .flipscreen .cards .card{
-    width: 130px;
-    height:130px;
-    background-color: #42855B;
-    margin-left: 58px;
-    margin-top: 20px;
+    width: 140px;
+    height:180px;
+    margin-left: 52px;
+    margin-top: 35px;
     border-radius: 10px;
+    background-color: #FEF5AC;
+}
+.flipscreen .cards .card img{
+    width: 90px;
+    height: 110px;
+
+    padding: 30px;
+    padding-bottom: 50px;
+
 }
