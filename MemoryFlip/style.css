@@ -42,6 +42,7 @@ body{
     margin-top: 35px;
     border-radius: 10px;
     background-color: #FEF5AC;
+    perspective: 1000px;
 }
 .flipscreen .cards .card img{
     width: 90px;
