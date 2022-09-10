@@ -1,6 +1,8 @@
+/* body section */
 body {
     background-color: #EEE3CB;
 }
+
 
 /* dark mode section */
 .darkmode {
@@ -41,18 +43,24 @@ body {
     margin-top: 10px;
 }
 
+
 /* start button section */
 .startBtn {
     position: absolute;
     width: 10%;
     height: 50px;
-    margin: 10% 2%;
+    margin: 14% 3%;
     background-color: #E94560;
     border-radius: 10px;
     font-size: 30px;
     color: #fff;
     border-color: #E94560;
 }
+.startBtn:hover{
+    color: #E94560;
+    background-color: #EEE3CB;
+}
+
 
 /* score section */
 .score {
@@ -76,7 +84,7 @@ body {
 /* title section */
 .title {
     font-family: "Kalam", sans-serif;
-    font-size: 60px;
+    font-size: 80px;
     color: #ffb200;
     position: absolute;
     margin-left: 40px;
@@ -94,6 +102,7 @@ body {
     height: 720px;
     background-color: #483838;
     margin-left: 20%;
+    margin-top: 15px;
     border-radius: 20px;
     position: absolute;
 
@@ -124,5 +133,7 @@ body {
 
     padding: 30px;
     padding-bottom: 50px;
+    position: absolute;
+
 
 }

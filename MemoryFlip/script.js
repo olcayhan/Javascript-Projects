@@ -1,3 +1,4 @@
+// declarations
 const cardArray = [
     {
         name: "snake",
@@ -60,99 +61,102 @@ const cardArray = [
 
     }
 ];
-
 let selectedCard = [];
 let cardIDs = [];
 let checkWon = 0;
 let count = 0;
 let counter = 0;
 
+// cards in the game
 const card = document.querySelectorAll(".card");
+// start button listener
 const startBtn = document.querySelector(".startBtn");
 
+// variables for need dark mode
 const ball = document.querySelector(".ball");
 const body = document.querySelector("body");
 
 ball.addEventListener("click", clicked);
-
-
-
 startBtn.addEventListener("click", init);
 
-
+// a function for initialize the game
 function init() {
     count++;
-    startBtn.innerHTML = "Retry"
+    startBtn.innerHTML = "Retry";
     if (count == 2) startBtn.addEventListener("click", location.reload());
 
     cardArray.sort(() => 0.5 - Math.random());
-    for (let i = 0; i < cardArray.length; i++) {
 
+
+
+
+    for (let i = 0; i < cardArray.length; i++) {
+        card[i].setAttribute("card-id", i);
+        var id = card[i].getAttribute('card-id');
+
+        let cardFront = document.createElement("img");
         let cardBack = document.createElement("img");
 
-        cardBack.setAttribute("src", "images/background.png");
 
 
-        card[i].setAttribute("card-id", i);
-        card[i].appendChild(cardBack);
-        card[i].addEventListener("click", flipCards);
+        cardBack.setAttribute("src", cardArray[id].img);
+        cardBack.className = "cardBack";
+        cardFront.setAttribute("src", "images/background.png");
+        cardBack.className = "cardFront";
 
+
+        cardBack.style.transform = "rotateY(180deg)"
+        cardBack.style.backfaceVisibility = "hidden";
+        cardFront.style.backfaceVisibility = "hidden";
+
+        card[id].appendChild(cardFront);
+        card[id].appendChild(cardBack);
+
+
+        card[id].addEventListener("click", flipCards);
 
 
     }
 }
 
+// a function for flip the cards
 function flipCards() {
-    const id = this.getAttribute('card-id');
-    selectedCard.push(cardArray[id].name);
-    cardIDs.push(id);
-    let thisImg = this.firstChild;
+    selectedCard.push(cardArray[this.getAttribute('card-id')].name);
+    cardIDs.push(this.getAttribute('card-id'));
 
-    this.style.transition = "transform 0.8s";
+    this.style.transition = "ease-in-out 0.8s";
     this.style.transformStyle = "preserve-3d";
     this.style.transform = "rotateY(180deg)";
-    setTimeout(() => {
-        thisImg.setAttribute("src", cardArray[id].img);
-
-    }, 300);
-
 
 
     if (selectedCard.length == 2) {
-        setTimeout(controller, 800);
+        setTimeout(() => {
+            controller();
+        }, 800); 
     }
 }
 
+// a function for controller the cards true or false
 function controller() {
-    const img = document.querySelectorAll("img");
 
     if (cardIDs[0] == cardIDs[1]) {
-
-
         card[cardIDs[0]].style.transform = "rotateY(0deg)";
-        img[cardIDs[0]].setAttribute("src", "images/background.png");
-
     }
 
-    else if (selectedCard[0] == selectedCard[1]) {
-        card[cardIDs[0]].style.transform = "rotateY(0deg)";
-        card[cardIDs[1]].style.transform = "rotateY(0deg)";
+    else if (selectedCard[0] === selectedCard[1]) {
+        card[cardIDs[0]].style.transform = "rotateY(180deg)";
+        card[cardIDs[1]].style.transform = "rotateY(180deg)";
         card[cardIDs[0]].removeEventListener("click", flipCards);
         card[cardIDs[1]].removeEventListener("click", flipCards);
 
         checkWon++;
-        setTimeout(() => {
-            if (checkWon == 6) alert("congrulations");
-        }, 1000)
 
+        if (checkWon == 6) setTimeout(() => { alert("congrulations") }, 1000)
+        
     }
     else {
         card[cardIDs[0]].style.transform = "rotateY(0deg)";
         card[cardIDs[1]].style.transform = "rotateY(0deg)";
-
-        img[cardIDs[0]].setAttribute("src", "images/background.png");
-        img[cardIDs[1]].setAttribute("src", "images/background.png");
-
 
     }
     cardIDs = [];
@@ -161,6 +165,7 @@ function controller() {
 
 }
 
+// a function for starting the game 
 function clicked() {
     if (counter == 0) {
         ball.style.margin = "5px 0px 0px 50px";
