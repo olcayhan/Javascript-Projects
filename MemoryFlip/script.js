@@ -66,11 +66,16 @@ let cardIDs = [];
 let checkWon = 0;
 let count = 0;
 let counter = 0;
+let scoreCounter = 0;
 
 // cards in the game
 const card = document.querySelectorAll(".card");
 // start button listener
 const startBtn = document.querySelector(".startBtn");
+
+const scoreCnt = document.querySelector(".scoreCounter");
+
+
 
 // variables for need dark mode
 const ball = document.querySelector(".ball");
@@ -91,6 +96,7 @@ function init() {
 
 
     for (let i = 0; i < cardArray.length; i++) {
+
         card[i].setAttribute("card-id", i);
         var id = card[i].getAttribute('card-id');
 
@@ -128,11 +134,14 @@ function flipCards() {
     this.style.transformStyle = "preserve-3d";
     this.style.transform = "rotateY(180deg)";
 
+    card[cardIDs[0]].style.animation = "";
+    card[cardIDs[1]].style.animation = "";
+
 
     if (selectedCard.length == 2) {
         setTimeout(() => {
             controller();
-        }, 800); 
+        }, 800);
     }
 }
 
@@ -140,29 +149,50 @@ function flipCards() {
 function controller() {
 
     if (cardIDs[0] == cardIDs[1]) {
+        card[cardIDs[0]].style.animation = "shake 0.4s";
         card[cardIDs[0]].style.transform = "rotateY(0deg)";
+        scoreCounter -= 10;
     }
 
     else if (selectedCard[0] === selectedCard[1]) {
+
+
+        card[cardIDs[0]].style.transition = "all 0.4s ease";
+        card[cardIDs[1]].style.transition = "all 0.4s ease";
+        card[cardIDs[0]].style.marginTop = "20px";
+        card[cardIDs[1]].style.marginTop = "20px";
+
+
         card[cardIDs[0]].style.transform = "rotateY(180deg)";
         card[cardIDs[1]].style.transform = "rotateY(180deg)";
         card[cardIDs[0]].removeEventListener("click", flipCards);
         card[cardIDs[1]].removeEventListener("click", flipCards);
 
+    
+
+        scoreCounter += 100;
         checkWon++;
 
         if (checkWon == 6) setTimeout(() => { alert("congrulations") }, 1000)
-        
+
     }
     else {
+
+        card[cardIDs[0]].style.animation = "shake 0.4s";
+        card[cardIDs[1]].style.animation = "shake 0.4s";
+
         card[cardIDs[0]].style.transform = "rotateY(0deg)";
         card[cardIDs[1]].style.transform = "rotateY(0deg)";
 
+        scoreCounter -= 20;
     }
+
+
+
     cardIDs = [];
     selectedCard = [];
 
-
+    scoreCnt.innerHTML = ` Score : ${scoreCounter} `;
 }
 
 // a function for starting the game 
