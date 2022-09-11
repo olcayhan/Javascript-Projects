@@ -73,7 +73,7 @@ let scoreCounter = 0;
 const startBtn = document.querySelector(".startBtn");
 const screen = document.querySelector(".flipscreen")
 const scoreCnt = document.querySelector(".scoreCounter");
-
+const startScreen = document.querySelector(".startScreen")
 
 
 // variables for need dark mode
@@ -86,6 +86,7 @@ startBtn.addEventListener("click", init);
 // a function for initialize the game
 function init() {
     count++;
+    if (count==1) screen.removeChild(startScreen);
     startBtn.innerHTML = "Retry";
     if (count == 2) startBtn.addEventListener("click", location.reload());
 

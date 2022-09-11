@@ -13,7 +13,7 @@ body {
     background: black;
     margin-left: 85%;
     margin-top: 20px;
-   
+
 }
 
 .darkmode .ball {
@@ -56,7 +56,8 @@ body {
     color: #fff;
     border-color: #E94560;
 }
-.startBtn:hover{
+
+.startBtn:hover {
     color: #E94560;
     background-color: #EEE3CB;
 }
@@ -108,6 +109,32 @@ body {
 
 }
 
+.flipscreen .startScreen h1 {
+    font-family: "Kalam", sans-serif;
+    color: #fff;
+    font-size: 70px;
+    text-align: center;
+}
+
+.flipscreen .startScreen h2 {
+    font-family: "Kalam", sans-serif;
+    color: #ffb200;
+    font-size: 100px;
+    text-align: center;
+    margin-top: -20px;
+}
+
+.flipscreen .startScreen h2 span {
+    color: #E94560;
+}
+.flipscreen .startScreen p{
+    font-family: "Kalam", sans-serif;
+
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+}
+
 .flipscreen .cards {
     width: 100%;
     height: 220px;
@@ -134,24 +161,30 @@ body {
     padding: 30px;
     padding-bottom: 50px;
     position: absolute;
-    
+
 }
 
-@keyframes shake{
-    10%, 90% {
+@keyframes shake {
+
+    10%,
+    90% {
         transform: translate3d(-1px, 0, 0);
-      }
-      
-      20%, 80% {
+    }
+
+    20%,
+    80% {
         transform: translate3d(2px, 0, 0);
-      }
-    
-      30%, 50%, 70% {
+    }
+
+    30%,
+    50%,
+    70% {
         transform: translate3d(-4px, 0, 0);
-      }
-    
-      40%, 60% {
+    }
+
+    40%,
+    60% {
         transform: translate3d(4px, 0, 0);
-      }
-    
+    }
+
 }
