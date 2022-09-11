@@ -69,10 +69,9 @@ let counter = 0;
 let scoreCounter = 0;
 
 // cards in the game
-const card = document.querySelectorAll(".card");
 // start button listener
 const startBtn = document.querySelector(".startBtn");
-
+const screen = document.querySelector(".flipscreen")
 const scoreCnt = document.querySelector(".scoreCounter");
 
 
@@ -92,7 +91,17 @@ function init() {
 
     cardArray.sort(() => 0.5 - Math.random());
 
-
+    for (let i = 0; i <= 2; i++) {
+        var cards = document.createElement("div");
+        cards.className = "cards";
+        for (let i = 0; i <= 3; i++) {
+            var card = document.createElement("div")
+            card.className = "card";
+            cards.appendChild(card);
+        }
+        screen.appendChild(cards);
+    }
+    console.log(card);
 
 
     for (let i = 0; i < cardArray.length; i++) {
@@ -168,7 +177,7 @@ function controller() {
         card[cardIDs[0]].removeEventListener("click", flipCards);
         card[cardIDs[1]].removeEventListener("click", flipCards);
 
-    
+
 
         scoreCounter += 100;
         checkWon++;
