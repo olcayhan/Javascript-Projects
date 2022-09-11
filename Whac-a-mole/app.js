@@ -23,7 +23,7 @@ mole.addEventListener("click", scoreCounter);
 // a function to switch dark mode and light mode
 function clicked() {
   if (count == 0) {
-    ball.style.margin = "5px 0px 0px 50px";
+    ball.style.margin = "5px 0px 0px 50%";
     ball.style.transition = "all 0.5s ease-out";
     body.style.background = "#293462";
     github.style.color = "#fff";
@@ -39,11 +39,10 @@ function clicked() {
 }
 
 // a function to generate a mole on screen
-async function getMole(){
+function getMole(){
     random = Math.floor(Math.random() * 15) + 1
     mole.src = "images/animal.png";
     document.getElementById(`hole${random}`).appendChild(mole);
-    await sleep(1000);
 
     if(document.getElementById(`hole${random}`).innerText != "") document.getElementById(`hole${random}`).removeChild(mole);
 }

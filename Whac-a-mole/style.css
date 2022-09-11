@@ -1,35 +1,39 @@
-body{
-    background-color: #F3E0B5;
+body {
+    background-color: #D6CDA4;
 }
 
 /* navbar section */
-.navbar{
+.navbar {
 
-    height:90px;
+    height: 90px;
     width: 52%;
     margin-left: 23%;
     border-radius: 10px;
     position: absolute;
-    background-color: #1CD6CE;
+    background-color: #483838;
     z-index: -1;
 }
-.navbar h1{
-    
+
+.navbar h1 {
+
     text-align: center;
     color: #D61C4E;
     font-size: 40px;
-    font-family: "DynaPuff",sans-serif;
+    font-family: "DynaPuff", sans-serif;
     margin-top: 20px;
     transform: scaleY(1.5);
-    
+
 }
-.navbar h1 span{
-    color: #111;
+
+.navbar h1 span {
+    color: #fff;
+    ;
 }
+
 /* github section */
-.github{
-    
-    position:absolute;
+.github {
+
+    position: absolute;
     margin-top: 45%;
 }
 
@@ -42,8 +46,9 @@ body{
     margin-left: 84%;
     margin-top: 20px;
     position: absolute;
-  }
-  .darkmode .ball {
+}
+
+.darkmode .ball {
     background: white;
     width: 40px;
     height: 40px;
@@ -52,90 +57,106 @@ body{
     margin-left: 5%;
     position: absolute;
     cursor: pointer;
-  }
-  #sun {
+}
+
+#sun {
     font-size: 30px;
     color: #ffb200;
     position: absolute;
     margin-top: 10px;
     margin-left: 58px;
-  }
-  #moon {
+}
+
+#moon {
     font-size: 30px;
     color: #fff;
     position: absolute;
     margin-left: 10px;
     margin-top: 10px;
-  }
-  
+}
+
 
 
 
 /* score section */
-.score{
+.score {
     margin-left: 20px;
     margin-top: 100px;
     width: 200px;
     height: 60px;
-    background-color: #1CD6CE;
+    background-color: #483838;
     position: absolute;
-    display:flex;
+    display: flex;
     font-size: 22px;
-    font-family: "DynaPuff",sans-serif;
+    font-family: "DynaPuff", sans-serif;
     border-radius: 20px;
-    
+
 }
-.score p{
+
+.score p {
     margin-top: 14px;
     margin-left: 10px;
+    color: #fff;
+
+
 }
-.score .point{
+
+.score .point {
     margin-top: 15px;
     margin-left: 10px;
     text-align: center;
-    
+    color: #fff;
+
+
+
 }
+
 /* counter section */
-.counter{
+.counter {
     margin-left: 20px;
     margin-top: 20px;
     width: 200px;
     height: 60px;
-    background-color: #1CD6CE;
-    display:flex;
+    background-color: #483838;
+    display: flex;
     position: absolute;
     font-size: 22px;
-    font-family: "DynaPuff",sans-serif;
+    font-family: "DynaPuff", sans-serif;
     border-radius: 20px;
-    
+    color: #fff;
+
+
 }
-.counter p{
+
+.counter p {
     margin-top: 14px;
     margin-left: 10px;
 }
-.counter .time{
+
+.counter .time {
     margin-top: 15px;
     margin-left: 10px;
     text-align: center;
-    
+
 }
 
 /* start section */
-.start .startGame{
+.start .startGame {
     margin-left: 20px;
     margin-top: 250px;
     width: 200px;
     height: 60px;
-    background-color: #1CD6CE;
-    display:flex;
+    background-color: #483838;
+    display: flex;
     position: absolute;
     font-size: 22px;
-    font-family: "DynaPuff",sans-serif;
+    font-family: "DynaPuff", sans-serif;
     border-radius: 20px;
     cursor: pointer;
     border: #1CD6CE;
 }
-.start .startGame p{
+
+.start .startGame p {
     text-align: center;
     font-size: 50px;
     margin-top: 0px;
@@ -145,35 +166,37 @@ body{
 
 
 /* container section */
-.container{
-    width: 800px;
+.container {
+    width: 52%;
     height: 510px;
-    background: #FEDB39;
+    background: #42855B;
     position: absolute;
     margin-left: 23%;
     margin-top: 10%;
     border-radius: 95px;
     z-index: -1;
-    
+
 }
 
-.container .screen{
-    display:flex;
+.container .screen {
+    display: flex;
     justify-content: space-evenly;
-    
+
 }
-.container .screen .hole{
+
+.container .screen .hole {
     background: #111;
     width: 80px;
     height: 80px;
     margin-left: 10px;
     margin-top: 70px;
     border-radius: 45px;
-    box-shadow: 8px 8px 8px #A47E3B inset;
+    box-shadow: 8px 8px 8px #90B77D inset;
 }
-.container .screen .hole img{
+
+.container .screen .hole img {
     width: 110px;
-    height: 110px;    
+    height: 110px;
     position: absolute;
     margin-top: -35px;
     margin-left: -15px;
@@ -181,7 +204,7 @@ body{
 
 /* endgame section */
 
-.endGame .gameOver{
+.endGame .gameOver {
     width: 800px;
     height: 510px;
     background-color: #D61C4E;
@@ -190,29 +213,247 @@ body{
     position: absolute;
     opacity: 0.95;
     border-radius: 25px;
-    font-family: "DynaPuff",sans-serif;
+    font-family: "DynaPuff", sans-serif;
     color: #1CD6CE;
     text-align: center;
 
 
 }
-.endGame .gameOver p{
+
+.endGame .gameOver p {
     font-size: 50px;
     margin-top: 20px;
 }
-.endGame .gameOver h1{
+
+.endGame .gameOver h1 {
     font-size: 60px;
-    margin-top: 40px; 
+    margin-top: 40px;
 }
-.endGame .gameOver button{
-    font-family: "DynaPuff",sans-serif;
+
+.endGame .gameOver button {
+    font-family: "DynaPuff", sans-serif;
     width: 200px;
     height: 70px;
-    background-color:#1CD6CE;
+    background-color: #1CD6CE;
     border-radius: 20px;
     font-size: 35px;
     color: white;
     border: #1CD6CE;
     cursor: pointer;
+
+}
+
+@media (max-width: 1300px) {
+
+    .container {
+        margin-left: 23%;
+        width: 60%;
+    }
+
+    .endGame .gameOver {
+        margin-left: 10%;
+    }
+
+    .navbar {
+        margin-left: 25%;
+    }
+
+    .github {
+        margin-top: 600px;
+    }
+}
+
+@media (max-width: 947px) {
+
+
+    .container {
+        margin: 18% 22%;
+        width: 75%;
+    }
+
+    .endGame .gameOver {
+        margin-left: 3%;
+    }
+
+    .score {
+        margin-left: 0%;
+        width: 25%;
+    }
+
+    .counter {
+        margin-left: 0%;
+        width: 25%;
+    }
+
+    .navbar {
+        margin-left: 28%;
+    }
+
+
+    .start .startGame {
+        margin-left: 0%;
+        width: 20%;
+        height: 50px;
+
+    }
+
+    .start .startGame p {
+        margin-top: 8px;
+        font-size: 30px;
+    }
+
+    .darkmode {
+        height: 30px;
+        width: 60px;
+
+    }
+
+    .darkmode .ball {
+        width: 20px;
+        height: 20px;
+        margin-top: 5%;
+        margin-left: 6%;
+    }
+
+    #sun {
+        font-size: 15px;
+        margin-top: 8px;
+        margin-left: 30px;
+    }
+
+    #moon {
+        font-size: 15px;
+        margin-top: 8px;
+        margin-left: 10px;
+    }
+
+
+
+
+}
+
+
+
+@media (max-width: 500px) {
+    .container {
+        margin: 50% 0%;
+        width: 100%;
+        height: 350px;
+    }
+
+    .container .screen {
+        margin: -8% -2%;
+        width: 100%;
+        height: 140px;
+    }
+
+    .container .screen .hole {
+        width: 55px;
+        height: 55px;
+    }
+
+    .container .screen .hole img {
+        width: 85px;
+        height: 78px;
+    }
+
+    .endGame .gameOver {
+        margin-left: 3%;
+        width: 350px;
+        height: 600px;
+    }
+
+    .endGame .gameOver h1 {
+        font-size: 120px;
+    }
+
+    .endGame .gameOver p {
+        margin-top: -50px;
+        font-size: 20px;
+    }
+
+    .score {
+        margin-left: 0%;
+        width: 120px;
+        height: 40px;
+    }
+
+    .score p {
+        margin-top: 10px;
+        font-size: 15px;
+
+    }
+
+    .score .point {
+        margin-top: 10px;
+        font-size: 15px;
+    }
+
+    .counter {
+        width: 120px;
+        height: 40px;
+        margin: 100px 240px;
+    }
+
+    .counter p {
+        margin-top: 10px;
+        font-size: 15px;
+    }
+
+    .counter .time {
+        margin-top: 10px;
+        font-size: 15px;
+
+    }
+
+    .navbar {
+        margin: 10px 15%;
+        width: 250px;
+        height: 50px;
+    }
+
+    .navbar h1 {
+        margin-top: 15px;
+        font-size: 20px;
+    }
+
+
+    .start .startGame {
+        margin: 560px 30%;
+        width: 40%;
+        height: 60px;
+
+    }
+
+    .start .startGame p {
+        margin-top: 2px;
+        font-size: 40px;
+    }
+
+    .darkmode {
+        width: 50px;
+        height: 30px;
+    }
+
+
+    .darkmode .ball {
+        width: 20px;
+        height: 20px;
+    }
+
+    #sun {
+        font-size: 15px;
+        margin-top: 8px;
+        margin-left: 28px;
+    }
+
+    #moon {
+        font-size: 15px;
+        margin-top: 8px;
+        margin-left: 10px;
+    }
+
+
+
 
 }
