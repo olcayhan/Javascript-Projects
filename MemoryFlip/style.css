@@ -188,3 +188,21 @@ body {
     }
 
 }
+
+
+@media (max-width: 1300px){
+    .flipscreen{
+        width: 600px;
+    }
+    .flipscreen .startScreen h1{
+        font-size: 50px;
+        margin-top: 100px;
+    }
+    .flipscreen .startScreen h2{
+        font-size: 80px;
+    }
+    .title{
+        margin: 20px 20px;
+        font-size: 70px;
+    }
+}
