@@ -92,16 +92,17 @@ function init() {
     cardArray.sort(() => 0.5 - Math.random());
 
     for (let i = 0; i <= 2; i++) {
-        var cards = document.createElement("div");
-        cards.className = "cards";
+        var cardsRowGenerate = document.createElement("div");
+        cardsRowGenerate.className = "cards";
         for (let i = 0; i <= 3; i++) {
-            var card = document.createElement("div")
-            card.className = "card";
-            cards.appendChild(card);
+            var cardGenerate = document.createElement("div");
+            cardGenerate.className = "card";
+            cardsRowGenerate.appendChild(cardGenerate);
         }
-        screen.appendChild(cards);
+        screen.appendChild(cardsRowGenerate);
     }
-    console.log(card);
+
+    var card = document.querySelectorAll(".card");
 
 
     for (let i = 0; i < cardArray.length; i++) {
@@ -128,14 +129,14 @@ function init() {
         card[id].appendChild(cardBack);
 
 
-        card[id].addEventListener("click", flipCards);
-
+        card[id].addEventListener("click", flipCards)
 
     }
 }
 
 // a function for flip the cards
 function flipCards() {
+    var card = document.querySelectorAll(".card");
     selectedCard.push(cardArray[this.getAttribute('card-id')].name);
     cardIDs.push(this.getAttribute('card-id'));
 
@@ -156,6 +157,8 @@ function flipCards() {
 
 // a function for controller the cards true or false
 function controller() {
+    var card = document.querySelectorAll(".card");
+
 
     if (cardIDs[0] == cardIDs[1]) {
         card[cardIDs[0]].style.animation = "shake 0.4s";
