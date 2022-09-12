@@ -7,8 +7,8 @@ body {
 /* dark mode section */
 .darkmode {
     position: absolute;
-    width: 100px;
-    height: 50px;
+    width: 85px;
+    height: 40px;
     border-radius: 45px;
     background: black;
     margin-left: 85%;
@@ -19,8 +19,8 @@ body {
 .darkmode .ball {
     position: absolute;
     background: white;
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     border-radius: 25px;
     margin-top: 5%;
     margin-left: 5%;
@@ -28,15 +28,15 @@ body {
 }
 
 #sun {
-    font-size: 30px;
+    font-size: 23px;
     color: #ffb200;
     position: absolute;
     margin-top: 10px;
-    margin-left: 58px;
+    margin-left: 55px;
 }
 
 #moon {
-    font-size: 30px;
+    font-size: 23px;
     color: #fff;
     position: absolute;
     margin-left: 10px;
@@ -47,9 +47,9 @@ body {
 /* start button section */
 .startBtn {
     position: absolute;
-    width: 10%;
+    width: 100px;
     height: 50px;
-    margin: 14% 3%;
+    margin: 175px 3%;
     background-color: #E94560;
     border-radius: 10px;
     font-size: 30px;
@@ -66,10 +66,10 @@ body {
 /* score section */
 .score {
     position: absolute;
-    width: 15%;
-    height: 100px;
+    width: 200px;
+    height: 75px;
     background-color: #483838;
-    margin: 6% 80%;
+    margin: 90px 80%;
     border-radius: 30px;
     color: #fff;
     text-align: center;
@@ -79,7 +79,7 @@ body {
 
 .score p {
     margin-left: -80px;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 /* title section */
@@ -99,10 +99,10 @@ body {
 
 /* card section */
 .flipscreen {
-    width: 53%;
+    width: 55%;
     height: 720px;
     background-color: #483838;
-    margin-left: 20%;
+    margin-left: 22%;
     margin-top: 15px;
     border-radius: 20px;
     position: absolute;
@@ -127,7 +127,8 @@ body {
 .flipscreen .startScreen h2 span {
     color: #E94560;
 }
-.flipscreen .startScreen p{
+
+.flipscreen .startScreen p {
     font-family: "Kalam", sans-serif;
 
     color: #fff;
@@ -147,21 +148,18 @@ body {
 
 .flipscreen .cards .card {
     width: 140px;
-    height: 180px;
-    margin-left: 52px;
+    height: 160px;
+    margin-left: 60px;
     margin-top: 35px;
     border-radius: 10px;
     background-color: #FEF5AC;
 }
 
 .flipscreen .cards .card img {
+    position: absolute;
     width: 90px;
     height: 110px;
-
-    padding: 30px;
-    padding-bottom: 50px;
-    position: absolute;
-
+    margin: 18px 22px;
 }
 
 @keyframes shake {
@@ -190,19 +188,99 @@ body {
 }
 
 
-@media (max-width: 1300px){
-    .flipscreen{
-        width: 600px;
+@media (max-width: 500px) {
+    .darkmode {
+        width: 23%;
+        height: 38px;
+        margin-left: 85%;
+        margin-top: 10px;
     }
-    .flipscreen .startScreen h1{
-        font-size: 50px;
-        margin-top: 100px;
+
+    .darkmode .ball {
+
+        width: 30px;
+        height: 30px;
+        margin-top: 5px;
+        margin-left: 5%;
     }
-    .flipscreen .startScreen h2{
+
+    #sun {
+        font-size: 25px;
+        margin-top: 8px;
+        margin-left: 53px;
+    }
+
+    #moon {
+        font-size: 25px;
+        margin-left: 10px;
+        margin-top: 8px;
+    }
+
+
+    .startBtn {
+        width: 100px;
+        height: 50px;
+        margin: 650px 150px;
+        font-size: 30px;
+    }
+
+
+    .score {
+        width: 180px;
+        height: 50px;
+        margin: 60px 220px;
+        font-size: 25px;
+    }
+
+    .score p {
+        margin-left: 0px;
+        margin-top: 0px;
+    }
+
+    .title {
+        font-size: 60px;
+        margin: 10px 10px;
+    }
+
+    .flipscreen {
+        width: 400px;
+        height: 500px;
+        margin-left: 0%;
+        margin-top: 130px;
+
+
+    }
+
+    .flipscreen .startScreen h1 {
+        margin-top: 60px;
+        font-size: 30px;
+    }
+
+    .flipscreen .startScreen h2 {
         font-size: 80px;
+        margin-top: 60px;
     }
-    .title{
-        margin: 20px 20px;
-        font-size: 70px;
+
+    .flipscreen .startScreen p {
+        font-size: 21px;
+    }
+
+    .flipscreen .cards {
+        width: 98%;
+        height: 150px;
+
+    }
+
+    .flipscreen .cards .card {
+        width: 120px;
+        height: 120px;
+        margin-left: 3%;
+        margin-top: 15px;
+
+    }
+
+    .flipscreen .cards .card img {
+        width: 55px;
+        height: 78px;
     }
 }
