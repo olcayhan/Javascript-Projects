@@ -47,12 +47,12 @@ body {
 /* start button section */
 .startBtn {
     position: absolute;
-    width: 100px;
-    height: 50px;
-    margin: 175px 3%;
+    width: 140px;
+    height: 60px;
+    margin: 200px 4%;
     background-color: #E94560;
     border-radius: 10px;
-    font-size: 30px;
+    font-size: 40px;
     color: #fff;
     border-color: #E94560;
 }
@@ -85,7 +85,7 @@ body {
 /* title section */
 .title {
     font-family: "Kalam", sans-serif;
-    font-size: 80px;
+    font-size: 90px;
     color: #ffb200;
     position: absolute;
     margin-left: 40px;
@@ -94,8 +94,6 @@ body {
 .title span {
     color: #E94560;
 }
-
-
 
 /* card section */
 .flipscreen {
@@ -268,12 +266,11 @@ body {
     }
 
     .flipscreen {
+        position: absolute;
         width: 400px;
         height: 500px;
-        margin-left: 0%;
+        margin-left:0%;
         margin-top: 130px;
-
-
     }
 
     .flipscreen .startScreen h1 {
