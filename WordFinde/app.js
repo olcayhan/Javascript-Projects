@@ -13,7 +13,7 @@ const keyboard = document.querySelectorAll(".buttons");
 const box = document.querySelectorAll(".box");
 const enterBtn = document.querySelector(".enterBtn");
 const enterPage = document.querySelector(".enterPage");
-const github = document.querySelector(".githuba")
+const github = document.querySelector(".githuba");
 
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 
