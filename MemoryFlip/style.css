@@ -78,7 +78,7 @@ body {
 }
 
 .score p {
-    margin-left: -80px;
+    margin-left: -50px;
     margin-top: 10px;
 }
 
@@ -160,6 +160,31 @@ body {
     width: 90px;
     height: 110px;
     margin: 18px 22px;
+}
+
+
+.endScreen {
+    font-family: "Pacifico", sans-serif;
+
+    position: absolute;
+    margin: -600px 20px;
+    border-radius: 60px 0px 60px 0px;
+    width: 800px;
+    height: 600px;
+    background-color: #E94560;
+    opacity: 0.98;
+}
+
+.endScreen p {
+    text-align: center;
+    font-size: 80px;
+    color: #fff;
+}
+
+.endScreen h1 {
+    text-align: center;
+    font-size: 55px;
+    color: #fff;
 }
 
 @keyframes shake {
@@ -282,5 +307,19 @@ body {
     .flipscreen .cards .card img {
         width: 55px;
         height: 78px;
+    }
+
+    .endScreen {
+        margin: -450px 0px;
+        width: 400px;
+        height: 450px;
+    }
+
+    .endScreen p {
+        font-size: 55px;
+    }
+
+    .endScreen h1 {
+        font-size: 40px;
     }
 }

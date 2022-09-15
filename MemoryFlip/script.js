@@ -73,8 +73,8 @@ let scoreCounter = 0;
 const startBtn = document.querySelector(".startBtn");
 const screen = document.querySelector(".flipscreen")
 const scoreCnt = document.querySelector(".scoreCounter");
-const startScreen = document.querySelector(".startScreen")
-
+const startScreen = document.querySelector(".startScreen");
+const cards = document.querySelectorAll(".cards");
 
 // variables for need dark mode
 const ball = document.querySelector(".ball");
@@ -86,7 +86,7 @@ startBtn.addEventListener("click", init);
 // a function for initialize the game
 function init() {
     count++;
-    if (count==1) screen.removeChild(startScreen);
+    if (count == 1) screen.removeChild(startScreen);
     startBtn.innerHTML = "Retry";
     if (count == 2) startBtn.addEventListener("click", location.reload());
 
@@ -148,7 +148,6 @@ function flipCards() {
     card[cardIDs[0]].style.animation = "";
     card[cardIDs[1]].style.animation = "";
 
-
     if (selectedCard.length == 2) {
         setTimeout(() => {
             controller();
@@ -170,23 +169,19 @@ function controller() {
     else if (selectedCard[0] === selectedCard[1]) {
 
 
-        card[cardIDs[0]].style.transition = "all 0.4s ease";
-        card[cardIDs[1]].style.transition = "all 0.4s ease";
         card[cardIDs[0]].style.marginTop = "20px";
         card[cardIDs[1]].style.marginTop = "20px";
 
-
-        card[cardIDs[0]].style.transform = "rotateY(180deg)";
-        card[cardIDs[1]].style.transform = "rotateY(180deg)";
         card[cardIDs[0]].removeEventListener("click", flipCards);
         card[cardIDs[1]].removeEventListener("click", flipCards);
+
 
 
 
         scoreCounter += 100;
         checkWon++;
 
-        if (checkWon == 6) setTimeout(() => { alert("congrulations") }, 1000)
+        if (checkWon == 6) finishScreen();
 
     }
     else {
@@ -224,3 +219,11 @@ function clicked() {
 }
 
 
+function finishScreen(){
+
+    var endScreen = document.createElement("div"); 
+    endScreen.className = "endScreen";
+    endScreen.innerHTML=`<p>Congrulations</p> <h1> Your Score : ${scoreCounter}</h1>`
+    screen.appendChild(endScreen);
+
+}
