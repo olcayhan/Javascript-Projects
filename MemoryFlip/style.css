@@ -186,6 +186,12 @@ body {
     color: #fff;
 }
 
+
+.github{
+    position: absolute;
+    margin-top: 680px;
+}
+
 @keyframes shake {
 
     10%,
