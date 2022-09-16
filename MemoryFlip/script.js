@@ -208,11 +208,11 @@ function clicked() {
     if (counter == 0) {
         ball.style.margin = "5px 0px 0px 50px";
         ball.style.transition = "all 0.5s ease-out";
-        body.style.background = "#293462";
+        body.style.background = "#292c35";
         counter++;
     } else {
         ball.style.margin = "5px 0px 0px 5px";
-        body.style.background = "#EEE3CB";
+        body.style.background = "#5A8F7B";
         ball.style.transition = "all 0.5s ease-out";
         counter--;
     }

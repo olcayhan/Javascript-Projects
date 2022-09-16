@@ -1,6 +1,6 @@
 /* body section */
 body {
-    background-color: #EEE3CB;
+    background-color: #5A8F7B;
 }
 
 
@@ -58,8 +58,9 @@ body {
 }
 
 .startBtn:hover {
-    color: #E94560;
-    background-color: #EEE3CB;
+    transition: all 0.2s ease;
+    color: #fff;
+    background-color: inherit;
 }
 
 
@@ -68,7 +69,7 @@ body {
     position: absolute;
     width: 200px;
     height: 75px;
-    background-color: #483838;
+    background-color: #0F3D3E;
     margin: 90px 80%;
     border-radius: 30px;
     color: #fff;
@@ -99,7 +100,7 @@ body {
 .flipscreen {
     width: 55%;
     height: 720px;
-    background-color: #483838;
+    background-color: #0F3D3E;
     margin-left: 22%;
     margin-top: 15px;
     border-radius: 20px;
@@ -210,12 +211,341 @@ body {
 
 }
 
+@media (max-width: 1300px){
+
+    .darkmode {
+        width: 85px;
+        height: 38px;
+        margin-left: 89%;
+        margin-top: 10px;
+    }
+
+    .darkmode .ball {
+
+        width: 30px;
+        height: 30px;
+        margin-top: 5px;
+        margin-left: 5%;
+    }
+
+    #sun {
+        font-size: 25px;
+        margin-top: 8px;
+        margin-left: 53px;
+    }
+
+    #moon {
+        font-size: 25px;
+        margin-left: 10px;
+        margin-top: 8px;
+    }
+
+
+    .startBtn {
+        width: 100px;
+        height: 50px;
+        margin: 650px 45%;
+        font-size: 30px;
+    }
+
+
+    .score {
+        width: 180px;
+        height: 50px;
+        margin: 60px 220px;
+        font-size: 25px;
+    }
+
+    .score p {
+        margin-left: 0px;
+        margin-top: 0px;
+    }
+
+    .title {
+        font-size: 60px;
+        margin: 10px 10px;
+    }
+
+    .flipscreen {
+        position: absolute;
+        width: 800px;
+        height: 520px;
+        margin:120px 17%;
+    }
+
+    .flipscreen .startScreen h1 {
+        margin-top: 60px;
+        font-size: 40px;
+    }
+
+    .flipscreen .startScreen h2 {
+        font-size: 80px;
+        margin-top: 60px;
+    }
+
+    .flipscreen .startScreen p {
+        font-size: 21px;
+    }
+
+    .flipscreen .cards {
+        width: 98%;
+        height: 150px;
+
+    }
+
+    .flipscreen .cards .card {
+        width: 110px;
+        height: 130px;
+        margin-left: 9%;
+        margin-top: 15px;
+
+    }
+
+    .flipscreen .cards .card img {
+        width: 60px;
+        height: 80px;
+    }
+
+    .endScreen {
+        margin: -450px 0px;
+        width: 800px;
+        height: 450px;
+    }
+
+    .endScreen p {
+        font-size: 55px;
+    }
+
+    .endScreen h1 {
+        font-size: 40px;
+    }
+ 
+}
+
+
+
+@media (max-width: 947px){
+   .darkmode {
+        width: 85px;
+        height: 38px;
+        margin-left: 85%;
+        margin-top: 10px;
+    }
+
+    .darkmode .ball {
+
+        width: 30px;
+        height: 30px;
+        margin-top: 5px;
+        margin-left: 5%;
+    }
+
+    #sun {
+        font-size: 25px;
+        margin-top: 8px;
+        margin-left: 53px;
+    }
+
+    #moon {
+        font-size: 25px;
+        margin-left: 10px;
+        margin-top: 8px;
+    }
+
+
+    .startBtn {
+        width: 100px;
+        height: 50px;
+        margin: 650px 390px;
+        font-size: 30px;
+    }
+
+
+    .score {
+        width: 180px;
+        height: 50px;
+        margin: 60px 220px;
+        font-size: 25px;
+    }
+
+    .score p {
+        margin-left: 0px;
+        margin-top: 0px;
+    }
+
+    .title {
+        font-size: 60px;
+        margin: 10px 10px;
+    }
+
+    .flipscreen {
+        position: absolute;
+        width: 700px;
+        height: 500px;
+        margin-left:10%;
+        margin-top: 130px;
+    }
+
+    .flipscreen .startScreen h1 {
+        margin-top: 60px;
+        font-size: 40px;
+    }
+
+    .flipscreen .startScreen h2 {
+        font-size: 80px;
+        margin-top: 60px;
+    }
+
+    .flipscreen .startScreen p {
+        font-size: 21px;
+    }
+
+    .flipscreen .cards {
+        width: 98%;
+        height: 150px;
+
+    }
+
+    .flipscreen .cards .card {
+        width: 100px;
+        height: 120px;
+        margin-left: 9%;
+        margin-top: 15px;
+
+    }
+
+    .flipscreen .cards .card img {
+        width: 55px;
+        height: 78px;
+    }
+
+    .endScreen {
+        margin: -450px 0px;
+        width: 700px;
+        height: 450px;
+    }
+
+    .endScreen p {
+        font-size: 55px;
+    }
+
+    .endScreen h1 {
+        font-size: 40px;
+    }
+ 
+}
+
+
+@media (max-width: 690px){
+    .darkmode {
+        width: 85px;
+        height: 38px;
+        margin-left: 90%;
+        margin-top: 10px;
+    }
+
+    .darkmode .ball {
+
+        width: 30px;
+        height: 30px;
+        margin-top: 5px;
+        margin-left: 5%;
+    }
+
+    #sun {
+        font-size: 25px;
+        margin-top: 8px;
+        margin-left: 53px;
+    }
+
+    #moon {
+        font-size: 25px;
+        margin-left: 10px;
+        margin-top: 8px;
+    }
+
+
+    .startBtn {
+        width: 100px;
+        height: 50px;
+        margin: 650px 280px;
+        font-size: 30px;
+    }
+
+
+    .score {
+        width: 180px;
+        height: 50px;
+        margin: 60px 220px;
+        font-size: 25px;
+    }
+
+    .score p {
+        margin-left: 0px;
+        margin-top: 0px;
+    }
+
+    .title {
+        font-size: 60px;
+        margin: 10px 10px;
+    }
+
+    .flipscreen {
+        position: absolute;
+        width: 600px;
+        height: 500px;
+        margin-left:3%;
+        margin-top: 130px;
+    }
+
+    .flipscreen .startScreen h1 {
+        margin-top: 60px;
+        font-size: 40px;
+    }
+
+    .flipscreen .startScreen h2 {
+        font-size: 80px;
+        margin-top: 60px;
+    }
+
+    .flipscreen .startScreen p {
+        font-size: 21px;
+    }
+
+    .flipscreen .cards {
+        width: 98%;
+        height: 150px;
+
+    }
+
+    .flipscreen .cards .card {
+        width: 100px;
+        height: 120px;
+        margin-left: 7%;
+        margin-top: 15px;
+
+    }
+
+    .endScreen {
+        margin: -450px 0px;
+        width: 600px;
+        height: 450px;
+    }
+
+    .endScreen p {
+        font-size: 55px;
+    }
+
+    .endScreen h1 {
+        font-size: 40px;
+    }
+}
 
 @media (max-width: 500px) {
     .darkmode {
-        width: 23%;
+        width: 85px;
         height: 38px;
-        margin-left: 85%;
+        margin-left: 75%;
         margin-top: 10px;
     }
 
@@ -251,7 +581,8 @@ body {
     .score {
         width: 180px;
         height: 50px;
-        margin: 60px 220px;
+        margin: 60px 55%;
+
         font-size: 25px;
     }
 
