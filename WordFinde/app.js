@@ -115,7 +115,7 @@ async function Overtester(){
     div.id = "gameOver";
 
     if(rightanswer.join('') == word){
-        div.innerHTML = `<h1>Congrualtions!!</h1> <h2>${word}</h2> <h2>you achieved at ${c/5} .step</h2> <h2>your point = ${120-(c/5)*20}</h2>`;
+        div.innerHTML = `<h1>congratulations!!</h1> <h2>${word}</h2> <h2>you achieved at ${c/5} .step</h2> <h2>your point = ${120-(c/5)*20}</h2>`;
         div.style.background= "#00A170";
     }
     else div.innerHTML = `<h1>Unlucky!!</h1> <h2>Try Again<h2> <h2>${word}</h2>`;
